@@ -4,7 +4,7 @@ Voici les différents composants du robot Poppy-Humanoid, regroupés par catégo
 
 # **Servomoteurs Dynamixel**
 
-[ ![](http://147.210.74.152/Poppy/1_Verification_kit/tous_les_servomoteurs_Ld.jpg)](http://147.210.74.152/Poppy/1_Verification_kit/tous_les_servomoteurs_Ld.jpg)
+[ ![](<img src="http://147.210.74.152/Poppy/1_Verification_kit/tous_les_servomoteurs_Ld.jpg" name="Image18" align="bottom" width="500" height="512" border="0">)](http://147.210.74.152/Poppy/1_Verification_kit/tous_les_servomoteurs_Ld.jpg)
 
 Attention ! Lorsque les servomoteurs sont vendus par lot (boite de 6 MX28 par exmple), leurs accessoires sont fournis séparément&nbsp_place_holder;:
 
