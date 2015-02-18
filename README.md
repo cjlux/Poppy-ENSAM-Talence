@@ -1,6 +1,4 @@
 # Poppy-ENSAM-Talence
-Usage of Poppy humanoid at ENSAM Talence
-
   ---------------------------------------------
   **Vérification du kit Poppy-Humanoid beta**
   ---------------------------------------------
