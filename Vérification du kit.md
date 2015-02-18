@@ -73,5 +73,5 @@ Tous les accessoires sont facultatifs.
   - 4 ressorts
   - 2 tampons en caoutchouc.
 
-[<img src="http://147.210.74.152/Poppy/1_Verification_kit/tampons.jpg" idth="459" height="350"]
+[<img src="http://147.210.74.152/Poppy/1_Verification_kit/tampons.jpg" idth="459" height="350">]
 (http://147.210.74.152/Poppy/1_Verification_kit/tampons.jpg)
