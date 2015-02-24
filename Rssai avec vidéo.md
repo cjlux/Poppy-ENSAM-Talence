@@ -1,6 +1,6 @@
 la vidéo machin [![video truc](http://147.210.74.152/Poppy/torse.ogv)](http://147.210.74.152/Poppy/torse.ogv)
 
-la vidéo machin [![video bidule](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogv)](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogv)
+la vidéo machin [![video bidule](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg)](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg)
 
 <video controls>
 	<source src="http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg" type="video/ogg">
