@@ -5,14 +5,8 @@ la vidéo machin [![video truc](http://147.210.74.152/Poppy/torse.ogv)](http://1
 	<p>Your browser does not support H.264/MP4.</p>
 </video>
 
-<embed type="application/x-vlc-plugin"
-         name="video1"
-         autoplay="no" loop="yes" width="400" height="300"
-         target="http://server.example.org/video1.vob" />
-<br />
-  <a href="javascript:;" onclick='document.video1.play()'>Play video1</a>
-  <a href="javascript:;" onclick='document.video1.pause()'>Pause video1</a>
-  <a href="javascript:;" onclick='document.video1.stop()'>Stop video1</a>
-  <a href="javascript:;" onclick='document.video1.fullscreen()'>Fullscreen</a>
-
-
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
