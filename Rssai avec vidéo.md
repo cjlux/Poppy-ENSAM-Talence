@@ -5,7 +5,7 @@ la vidéo machin [![video truc](http://147.210.74.152/Poppy/torse.ogv)](http://1
 la vidéo machin [![video bidule](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg)](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg)
 
 <video controls>
-	<source src="http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg" type="video/ogg">
+	<source src="http://147.210.74.152/Poppy/torse.ogv" type="video/ogv">
 	<p>Your browser does not support H.264/MP4.</p>
 </video>
 
