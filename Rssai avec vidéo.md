@@ -14,3 +14,8 @@ la vidéo machin [![video bidule](147.210.74.152/Poppy/Tete_sans_copyright_small
   <source src="147.210.74.152/Poppy/torse.ogv" type="video/ogv">
   Your browser does not support HTML5 video.
 </video>
+
+<video controls>
+  <source src="147.210.74.152/big_buck_bunny.ogv" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
