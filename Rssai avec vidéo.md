@@ -11,6 +11,6 @@ la vidéo machin [![video bidule](http://147.210.74.152/Poppy/Tete_sans_copyrigh
 
 <video width="400" controls>
   <source src="mov_bbb.mp4" type="video/mp4">
-  <source src="http://147.210.74.152/Poppy/torse.ogv" type="video/ogg">
+  <source src="http://147.210.74.152/Poppy/torse.ogv" type="video/ogv">
   Your browser does not support HTML5 video.
 </video>
