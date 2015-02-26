@@ -1,4 +1,4 @@
-la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png)" align="center" witdh="240" >]
+la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png" align="center">]
 (http://147.210.74.152/Poppy/torse.ogv)
 
 <video src="http://147.210.74.152/Poppy/torse.ogv" width="640" height="360" controls="controls" ></video>
