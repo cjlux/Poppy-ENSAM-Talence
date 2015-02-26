@@ -2,7 +2,7 @@ la vidéo machin [![video truc](http://147.210.74.152/Poppy/torse.ogv)](http://1
 
 <video src="http://147.210.74.152/Poppy/torse.ogv" width="640" height="360" controls="controls" ></video>
 
-la vidéo machin [![video bidule](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg)](http://147.210.74.152/Poppy/Tete_sans_copyright_small.ogg)
+la vidéo machin [![video bidule](http://147.210.74.152/Poppy/Web/2_Montage_Parametrage_des_servomoteurs/servomoteur_et_parametrage_win_sd.mp4)](http://147.210.74.152/Poppy/Web/2_Montage_Parametrage_des_servomoteurs/servomoteur_et_parametrage_win_sd.mp4)
 
 <video controls>
 	<source src="http://147.210.74.152/Poppy/torse.ogv" type="video/ogv">
