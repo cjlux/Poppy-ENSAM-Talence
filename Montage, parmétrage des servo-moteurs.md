@@ -6,7 +6,8 @@ Les servomoteurs Dynamixel MX-28T et MX-64 sont vendus partiellement montés :
 
 Le montage consiste à fixer le palonnier à l'arbre moteur.
 ## Matériel nécessaire :
-  - [ ] clef allen de 2 mm.
+  - [ ]  clef allen de 2 mm.
+
 **Attention** Il faut aligner l'encoche sur le palonnier avec le poinçonnage sur l'arbre du servomoteur :  
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/palonnier_ld.jpg" align="bottom" width="290" height="251" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/palonnier_ld.jpg)
@@ -17,7 +18,7 @@ La rondelle doit être intercalée entre le palonnier et le servomoteur :
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg" name="Image5" align="bottom" width="245" height="141" border="0" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg)
 
-Procédure de montage : 
+La Procédure de montage est ici  
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.png" align="center">]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.mp4)
 
@@ -38,20 +39,16 @@ Procédure de montage :
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg" align="bottom" width="643" height="243" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg)
 
-## Logiciel nécessaire:
+## Logiciel nécessaire :
 ### _Linux/Mac_
   - **PyPot**  
-commande d'installation: `sudo pip install pypot`
-    Tester l'installation : `python -c "import pypot"` ne doit pas retourner d'erreur !  
-    _Pypot_ fournit le programme _herborist_ qui permlet de configurer les servomoteurs via un port USB.  
-    L'utilisation d'**H****erborist** nécessite des _accès en écriture_ sur les ports USB : l'utilisateur doit faire partie du groupe dialout
-    Pour vérifier si vous êtes dans le groupe dialout, taper la commande `id`.
-    Si dialout est dans la liste, vous possédez la permission d'accès au port série.   
-    Sinon, il taper la commande `sudo adduser yourlogin dialout` 
-    
-    tester le succès de la procédure:	id
-    
-    Si vous ne voyez toujours pas *dialout* dans la liste, c'est que les attibuts de votre session sont fixés au démarrage de la session : fermez puis ouvrez à nouveau votre session utilisateur. Taper à nouveau `id`pour vérifier.
+*Pypot* fournit le programme *herborist* qui permet de configurer les servomoteurs via un port USB.  
+La commande d'installation de *pypot* est : `sudo pip install pypot`. *pip* télécharge et installe le paquet *pypot* depui sle site https://pypi.python.org/pypi.   
+Pour tester l'installation vous pouvez taper : `python -c "import pypot"` qui ne devrait pas retourner d'erreur !  
+L'utilisation d'*Herborist* nécessite des *accès en écriture* sur les ports USB (on parle aussi de *port série*) : pour avoir ces accès, l'utilisateur doit faire partie du groupe *dialout*.  
+Pour vérifier si vous faites partie du groupe dialout, taper la commande `id` : 
+ - si dialout est dans la liste, vous faites partie de ce groupe et vous bénéficiez automatiquement des accès en lecture/écriture au port série.   
+  - Sinon, il faut ajouter votre login au groupe dialout en tapant la commande `sudo adduser yourlogin dialout`. Sur la plupart des systèmes GNU/Linux, les attibuts de session (liste des groupes par exemple...) sont fixés à l'ouverture de la session : pour activer les changements fermez puis ouvrez à nouveau votre session utilisateur. Taper à nouveau`id` : cette fois le groupe dialout doit apparaître.
     
     
     Nota
