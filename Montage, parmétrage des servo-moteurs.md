@@ -17,13 +17,75 @@ La rondelle doit être intercalée entre le palonnier et le servomoteur :
 
 Procédure de montage : 
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.png" align="center">]
-(http://147.210.74.152/Poppy/Web/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.mp4)
+(http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.mp4)
 
-la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png" align="center">]
-(http://147.210.74.152/Poppy/torse.ogv)
-<video src="http://147.210.74.152/Poppy/torse.ogv" width="640" height="360" controls="controls" ></video>
 
-<video controls>
-	<source src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.mp4" type="video/mp4">
-	<p>Your browser does not support H.264/MP4.</p>
-</video>
+# Paramétrage
+
+Matériel nécessaire :
+  - électronique
+    - alimentation 12 V : SMPS 12V 5A PS-10 x1
+    - carte pour alimenter en 12 V les servos : SMPS2Dynamixel x1
+    - convertisseur USB <-> 3 points : USB2AX x1
+  - câblage
+    - câble USB 30 cm  mâle–femalle x1
+    - deux câbles avec connecteurs 3 points : Cable-3P x2 (longueur indifférente)
+  - servomoteur
+    - MX-28T ou MX-64 ou AX-12A x1
+
+[<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg" align="bottom" width="643" height="243" >]
+(http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg)
+
+Logiciel nécessaire:
+_Linux/Mac_
+  - **PyPot**
+commande d'installation&nbsp_place_holder;: sudo pip install pypot
+    Tester l'installation&nbsp_place_holder;:				python
+    -c "import pypot"
+    ne doit pas retourner
+    d'erreur
+    
+    L'utilisation d'**H****erborist**
+    nécessite des accès en écriture de fichiers du groupe dialout
+    (ex&nbsp_place_holder;: port série), pour vérifier si vous êtes dans le groupe
+    dialout, taper la commande
+    id.
+    
+    Si dialout
+    est dans la liste, vous possédez la permission d'accès au port
+    serie.
+    
+    Sinon, 							sudo
+    adduser yourlogin dialout
+    
+    tester le succès de la procédure&nbsp_place_holder;:	id
+    
+    Si vous ne voyez toujours pas dialout
+    dans la liste, fermez puis ouvrez à nouveau votre session
+    utilisateur. Taper à nouveau id
+    pour vérifier.
+    
+    
+    Nota
+    
+    L'installation de PyPot peut s'effectuer à
+    l'échelle locale ou globale. La procédure qui vous est proposée
+    est à l'échelle globale. L'installation est faite au niveau
+    administrateur et impacte l'arborescence machine.
+    
+    L'installation locale pip
+    install -user
+    pypot
+    installe des modules dans l'arborescence de l'utilisateur. J'ignore
+    pour quel type d'installation PyPot et Herborist ont été conçus.
+    Je conseille par défaut l'installation globale.
+    
+    
+    Procédure :  vidéo en cours de création
+
+
+_Windows_  
+  - FTDI (VCP) Driver&nbsp_place_holder;: **USB2AX.inf** pour communiquer avec USB2Dynamixel
+  - **DynamixelWizard** inclus dans la suite logicielle RobotPlus
+
+Procédure : assemblage dynamixel french music et commentaires.mp4
