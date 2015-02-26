@@ -19,3 +19,10 @@ la vidéo machin [![video bidule](http://147.210.74.152/Poppy/Web/2_Montage_Para
   <source src="http://147.210.74.152/big_buck_bunny.ogv" type="video/ogg">
   Your browser does not support HTML5 video.
 </video>
+
+
+`<code>` spans are delimited
+by backticks.
+
+You can include literal backticks
+like `` `this` ``.
