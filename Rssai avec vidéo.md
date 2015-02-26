@@ -1,3 +1,6 @@
+
+!VIDEO "http://www.youtube.com/embed/7aEYoP5-duY"
+
 la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png" align="center">]
 (http://147.210.74.152/Poppy/torse.ogv)
 
