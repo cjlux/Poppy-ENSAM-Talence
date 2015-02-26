@@ -41,36 +41,26 @@ La Procédure de montage est ici
 
 ## Logiciel nécessaire :
 ### _Linux/Mac_
-  - **PyPot**  
-*Pypot* fournit le programme *herborist* qui permet de configurer les servomoteurs via un port USB.  
-La commande d'installation de *pypot* est : `sudo pip install pypot`. *pip* télécharge et installe le paquet *pypot* depui sle site https://pypi.python.org/pypi.   
+#### **PyPot**  
+*Pypot* fournit le programme *herborist* qui permet de configurer les servomoteurs via un port USB. La commande  d'installation de *pypot* est : `sudo pip install pypot`.  
+*pip* télécharge et installe le paquet *pypot* depuis le site https://pypi.python.org/pypi.   
+
 Pour tester l'installation vous pouvez taper : `python -c "import pypot"` qui ne devrait pas retourner d'erreur !  
 L'utilisation d'*Herborist* nécessite des *accès en écriture* sur les ports USB (on parle aussi de *port série*) : pour avoir ces accès, l'utilisateur doit faire partie du groupe *dialout*.  
 Pour vérifier si vous faites partie du groupe dialout, taper la commande `id` : 
- - si dialout est dans la liste, vous faites partie de ce groupe et vous bénéficiez automatiquement des accès en lecture/écriture au port série.   
+  - si dialout est dans la liste, vous faites partie de ce groupe et vous bénéficiez automatiquement des accès en lecture/écriture au port série.
   - Sinon, il faut ajouter votre login au groupe dialout en tapant la commande `sudo adduser yourlogin dialout`. Sur la plupart des systèmes GNU/Linux, les attibuts de session (liste des groupes par exemple...) sont fixés à l'ouverture de la session : pour activer les changements fermez puis ouvrez à nouveau votre session utilisateur. Taper à nouveau`id` : cette fois le groupe dialout doit apparaître.
-    
-    
-    Nota
-    
-    L'installation de PyPot peut s'effectuer à
-    l'échelle locale ou globale. La procédure qui vous est proposée
-    est à l'échelle globale. L'installation est faite au niveau
-    administrateur et impacte l'arborescence machine.
-    
-    L'installation locale pip
-    install -user
-    pypot
-    installe des modules dans l'arborescence de l'utilisateur. J'ignore
-    pour quel type d'installation PyPot et Herborist ont été conçus.
-    Je conseille par défaut l'installation globale.
-    
-    
-    Procédure :  vidéo en cours de création
 
+Note 
+    L'installation de PyPot peut s'effectuer à l'échelle locale ou globale. La procédure qui vous est proposée
+    est à l'échelle globale. L'installation est faite au niveau administrateur et impacte l'arborescence machine.
+    
+    L'installation locale par la commande `pip install -user pypot` installe le fichiers du paquet dans l'arborescence de l'utilisateur. J'ignore pour quel type d'installation PyPot et Herborist ont été conçus. Je conseille par défaut l'installation globale.
 
-_Windows_  
-  - FTDI (VCP) Driver&nbsp_place_holder;: **USB2AX.inf** pour communiquer avec USB2Dynamixel
-  - **DynamixelWizard** inclus dans la suite logicielle RobotPlus
+Procédure :  vidéo en cours de création
+
+### _Windows_  
+  - FTDI (VCP) Driver: **USB2AX.inf** pour communiquer avec USB2Dynamixel
+  - **DynamixelWizard** inclus dans la suite logicielle RobotPlus.
 
 Procédure : assemblage dynamixel french music et commentaires.mp4
