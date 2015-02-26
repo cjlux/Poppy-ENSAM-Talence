@@ -4,7 +4,9 @@ Les servomoteurs Dynamixel MX-28T et MX-64 sont vendus partiellement montés :
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/boite_1_contenu_face_ld.jpg" align="bottom" width="595" height="355">]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/boite_1_contenu_face_ld.jpg)  
 
-Le montage consiste à fixer le palonnier à l'arbre moteur (matériel nécessaire : clef allen de 2 mm).
+Le montage consiste à fixer le palonnier à l'arbre moteur.
+## Matériel nécessaire :
+  - [ ] clef allen de 2 mm.
 **Attention** Il faut aligner l'encoche sur le palonnier avec le poinçonnage sur l'arbre du servomoteur :  
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/palonnier_ld.jpg" align="bottom" width="290" height="251" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/palonnier_ld.jpg)
@@ -22,7 +24,7 @@ Procédure de montage :
 
 # Paramétrage
 
-Matériel nécessaire :
+## Matériel nécessaire :
   - électronique
     - alimentation 12 V : SMPS 12V 5A PS-10 x1
     - carte pour alimenter en 12 V les servos : SMPS2Dynamixel x1
@@ -36,34 +38,20 @@ Matériel nécessaire :
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg" align="bottom" width="643" height="243" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg)
 
-Logiciel nécessaire:
-_Linux/Mac_
-  - **PyPot**
-commande d'installation&nbsp_place_holder;: sudo pip install pypot
-    Tester l'installation&nbsp_place_holder;:				python
-    -c "import pypot"
-    ne doit pas retourner
-    d'erreur
+## Logiciel nécessaire:
+### _Linux/Mac_
+  - **PyPot**  
+commande d'installation: `sudo pip install pypot`
+    Tester l'installation : `python -c "import pypot"` ne doit pas retourner d'erreur !  
+    _Pypot_ fournit le programme _herborist_ qui permlet de configurer les servomoteurs via un port USB.  
+    L'utilisation d'**H****erborist** nécessite des _accès en écriture_ sur les ports USB : l'utilisateur doit faire partie du groupe dialout
+    Pour vérifier si vous êtes dans le groupe dialout, taper la commande `id`.
+    Si dialout est dans la liste, vous possédez la permission d'accès au port série.   
+    Sinon, il taper la commande `sudo adduser yourlogin dialout` 
     
-    L'utilisation d'**H****erborist**
-    nécessite des accès en écriture de fichiers du groupe dialout
-    (ex&nbsp_place_holder;: port série), pour vérifier si vous êtes dans le groupe
-    dialout, taper la commande
-    id.
+    tester le succès de la procédure:	id
     
-    Si dialout
-    est dans la liste, vous possédez la permission d'accès au port
-    serie.
-    
-    Sinon, 							sudo
-    adduser yourlogin dialout
-    
-    tester le succès de la procédure&nbsp_place_holder;:	id
-    
-    Si vous ne voyez toujours pas dialout
-    dans la liste, fermez puis ouvrez à nouveau votre session
-    utilisateur. Taper à nouveau id
-    pour vérifier.
+    Si vous ne voyez toujours pas *dialout* dans la liste, c'est que les attibuts de votre session sont fixés au démarrage de la session : fermez puis ouvrez à nouveau votre session utilisateur. Taper à nouveau `id`pour vérifier.
     
     
     Nota
