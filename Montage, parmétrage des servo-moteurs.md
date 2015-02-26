@@ -12,7 +12,7 @@ Le montage consiste à fixer le palonnier à l'arbre moteur (matériel nécessai
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/repere_et_poinconnage_ld.jpg)
 
 La rondelle doit être intercalée entre le palonnier et le servomoteur :  
-[<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg" name="Image5" align="bottom" width="245" height="241" border="0" >)]
+[<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg" name="Image5" align="bottom" width="245" height="141" border="0" >)]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg)
 
 Procédure : assemblage dynamixel french music et commentaires.mp4
