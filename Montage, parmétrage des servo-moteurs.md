@@ -19,9 +19,10 @@ La rondelle doit être intercalée entre le palonnier et le servomoteur :
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg" name="Image5" align="bottom" width="245" height="141" border="0" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg)
 
-La Procédure de montage est ici
+La Procédure de montage est ici : 
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.mp4)
+&nbsp&nbsp
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.png" align="center" width="180">.ogv]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/assemblage_dynamixel_french_avec_music.ogv)
 
