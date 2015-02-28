@@ -1,10 +1,14 @@
+la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png" align="center">](http://147.210.74.152/Poppy/torse.ogv)
 
 <iframe width="480" height="360" src="http://www.youtube.com/embed/WO82PoAczTc" frameborder="0"> </iframe>
 
-<span class="youtube-embed">AyPzM5WK8ys</span> 
-
-la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png" align="center">]
-(http://147.210.74.152/Poppy/torse.ogv)
+<object width="425" height="350">
+  <param name="movie" value="http://www.youtube.com/v/AyPzM5WK8ys" />
+  <param name="wmode" value="transparent" />
+  <embed src="http://www.youtube.com/v/AyPzM5WK8ys"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
 
 <video src="http://147.210.74.152/Poppy/torse.ogv" width="640" height="360" controls="controls" ></video>
 
