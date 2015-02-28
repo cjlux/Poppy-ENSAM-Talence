@@ -1,6 +1,8 @@
 
 <iframe width="480" height="360" src="http://www.youtube.com/embed/WO82PoAczTc" frameborder="0"> </iframe>
 
+<span class="youtube-embed">AyPzM5WK8ys</span> 
+
 la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png" align="center">]
 (http://147.210.74.152/Poppy/torse.ogv)
 
