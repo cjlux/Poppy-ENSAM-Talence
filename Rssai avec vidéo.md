@@ -3,10 +3,10 @@ la vidéo machin [<img src="http://147.210.74.152/Poppy/torse.png" align="center
 <iframe width="480" height="360" src="http://www.youtube.com/embed/WO82PoAczTc" frameborder="0"> </iframe>
 
 <object width="425" height="350">
-  <param name="movie" value="http://www.youtube.com/v/AyPzM5WK8ys" />
+  <param name="movie" value="http://147.210.74.152/Poppy/torse.ogv" />
   <param name="wmode" value="transparent" />
-  <embed src="http://www.youtube.com/v/AyPzM5WK8ys"
-         type="application/x-shockwave-flash"
+  <embed src="http://147.210.74.152/Poppy/torse.ogv"
+         type="video/ogv"
          wmode="transparent" width="425" height="350" />
 </object>
 
