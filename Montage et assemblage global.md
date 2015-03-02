@@ -1,4 +1,4 @@
-# Montage
+# :construction: Montage :construction:
 
 ## Jambes
 
@@ -24,7 +24,7 @@ Procédure : vidéo en cours de création
 
 Procédure : vidéo en cours de création
 
-# Assemblage
+# :construction: Assemblage :construction:
 
 ## Corps
 
@@ -46,4 +46,5 @@ Procédure : vidéo en cours de création
 
 Procédure : vidéo en cours de création
 
-[Retour au sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
+[ :arrow_left: Montage, paramétrage des servo-moteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%2C%20parm%C3%A9trage%20des%20servo-moteurs.md)
+[ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
