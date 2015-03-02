@@ -58,8 +58,8 @@ Pour vérifier si vous faites partie du groupe dialout, taper la commande `id` :
 Procédure :  vidéo en cours de création
 
 ### _Windows_  
-  - FTDI (VCP) Driver: **USB2AX.inf** pour communiquer avec USB2Dynamixel
-  - **DynamixelWizard** inclus dans la suite logicielle RobotPlus.
+  - FTDI (VCP) Driver: [USB2AX.inf] (http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart) pour communiquer avec USB2Dynamixel
+  - **DynamixelWizard** inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
 
 Procédure : :construction: vidéo en cours de création
 
