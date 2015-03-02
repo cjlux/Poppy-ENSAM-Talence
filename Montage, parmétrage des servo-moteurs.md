@@ -7,7 +7,7 @@ Les servomoteurs Dynamixel MX-28T et MX-64 sont vendus partiellement montés :
 
 Le montage consiste à fixer le palonnier à l'arbre moteur.
 ## Matériel nécessaire :
-  - []&nbsp; clef allen de 2 mm.
+  - clef allen de 2 mm.
 
 **Attention** Il faut aligner l'encoche sur le palonnier avec le poinçonnage sur l'arbre du servomoteur :  
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/palonnier_ld.jpg" align="bottom" width="290" height="251" >]
