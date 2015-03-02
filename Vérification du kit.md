@@ -31,16 +31,16 @@ Assurez-vous de posséder tous les éléments contenus dans les emballages indiv
 (http://147.210.74.152/Poppy/1_Verification_kit/connectique_globale_ld.jpg)
 
 Cet ensemble se divise en trois sous-ensembles :  
-  1. ## la connectique USB  
+## 1. la connectique USB  
 [<imd src="http://147.210.74.152/Poppy/1_Verification_kit/connectique_usb_ld.jpg" width="562" height="453">]
 (http://147.210.74.152/Poppy/1_Verification_kit/connectique_usb_ld.jpg)  
 Nota : La carte Sparkfun FTDI Basic Breakout – 3.3V est un adaptateur USB-3P (câble 3 points).
 
-  2. ## la connectique 3P permettant d'alimenter le servomoteur  
+## 2.la connectique 3P permettant d'alimenter le servomoteur  
 [<img src="http://147.210.74.152/Poppy/1_Verification_kit/pieces_alim_ld.jpg" width="562" height="453">]
 (http://147.210.74.152/Poppy/1_Verification_kit/pieces_alim_ld.jpg)
 
-  3. ## la centrale inertielle 9 DOF  
+## 3. la centrale inertielle 9 DOF  
 [<img src="http://147.210.74.152/Poppy/1_Verification_kit/carte_centrale_ld.jpg" width="151" height="196">]
 (http://147.210.74.152/Poppy/1_Verification_kit/carte_centrale_ld.jpg)   
 gyroscope 3 axes, accéléromètre 3 axes, magnétomètre 3 axes    
@@ -76,5 +76,6 @@ Tous les accessoires sont facultatifs.
 [<img src="http://147.210.74.152/Poppy/1_Verification_kit/tampons.jpg" idth="459" height="350">]
 (http://147.210.74.152/Poppy/1_Verification_kit/tampons.jpg)
 
-[Retour au sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
-[Montage, paramétrage des servo-moteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%2C%20parm%C3%A9trage%20des%20servo-moteurs.md)
+[Montage, paramétrage des servo-moteurs ->] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%2C%20parm%C3%A9trage%20des%20servo-moteurs.md)
+
+[Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
