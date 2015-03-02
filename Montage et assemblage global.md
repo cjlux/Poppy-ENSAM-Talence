@@ -45,3 +45,5 @@ Procédure : vidéo en cours de création
 ## Chaussures
 
 Procédure : vidéo en cours de création
+
+[Retour au sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
