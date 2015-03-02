@@ -61,8 +61,8 @@ Procédure :  vidéo en cours de création
   - FTDI (VCP) Driver: **USB2AX.inf** pour communiquer avec USB2Dynamixel
   - **DynamixelWizard** inclus dans la suite logicielle RobotPlus.
 
-Procédure : vidéo en cours de création
+Procédure : :construction: vidéo en cours de création
 
-[Retour au sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
-[Vérification du kit] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/V%C3%A9rification%20du%20kit.md)
-[Montage, assemblage global] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%20et%20assemblage%20global.md)
+[ :arrow_left: Vérification du kit] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/V%C3%A9rification%20du%20kit.md)
+[ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
+[ :arrow_right: Montage, assemblage global] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%20et%20assemblage%20global.md)
