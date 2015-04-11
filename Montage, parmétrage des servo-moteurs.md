@@ -55,13 +55,18 @@ Pour vérifier si vous faites partie du groupe dialout, taper la commande `id` :
   - si dialout est dans la liste, vous faites partie de ce groupe et vous bénéficiez automatiquement des accès en lecture/écriture au port série.
   - Sinon, il faut ajouter votre login au groupe dialout en tapant la commande `sudo adduser yourlogin dialout`. Sur la plupart des systèmes GNU/Linux, les attibuts de session (liste des groupes par exemple...) sont fixés à l'ouverture de la session : pour activer les changements fermez puis ouvrez à nouveau votre session utilisateur. Taper à nouveau`id` : cette fois le groupe dialout doit apparaître.
 
-Procédure :  vidéo en cours de création
 
 ### _Windows_  
   - FTDI (VCP) Driver: [USB2AX.inf] (http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart) pour communiquer avec USB2Dynamixel
   - **DynamixelWizard** inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
 
-Procédure : :construction: vidéo en cours de création
+Procédure :  
+[<img src="http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.png" align="center" width="180">.mp4]
+(http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.mp4)
+&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.png" align="center" width="180">.ogv]
+(http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.ogv)
+
 
 [ :arrow_left: Vérification du kit] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/V%C3%A9rification%20du%20kit.md)
 [ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
