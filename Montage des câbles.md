@@ -97,10 +97,9 @@ On peut le faire avec le code starting_position.py:
 import pypot.robot <BR>
 from poppytools.configuration.config import poppy_config <BR>
 poppy = pypot.robot.from_config(poppy_config) <BR>
-poppy.start_sync() <BR>
-
+poppy.start_sync() <BR>*
 **main program** <BR>
-for m in poppy.motors: <BR>
+*for m in poppy.motors: <BR>
         m.compliant = False <BR>
         m.torque_limit = 65 # Reduce max torque to keep motor temperature low <BR>
         m.moving_speed = 65 <BR>
