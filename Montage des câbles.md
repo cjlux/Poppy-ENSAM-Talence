@@ -14,7 +14,7 @@ Le Bioloid 3P Extension Board du haut du corps est connecté au SMPS2 Dynamixel 
 ## BAS DU CORPS
 
 Le Bioloid 3P Extension Board du bas du corps est connecté au SMPS2 Dynamixel et aux moteurs “r_hip_x (id=11)” et “l_hip_x (id=21)”. La partie inférieure du robot est attachée à l’USB HUB 4 PORTS par le SMPS2 Dynamixel.
-Pour connecter les moteurs “r_hip_y (id=23)” - “r_knee_y (id=24)” et “l_hip_y (id=13)” - “l_knee_y (id=14)” on a besoin d’un câble d'au moins 20cm de long (Voir figure 3a) et pour la connexion USB HUB 4 PORTS - SMPS2 Dynamixel d’un câble de 60cm.
+Pour connecter les moteurs “r_hip_y (id=23)” - “r_knee_y (id=24)” et “l_hip_y (id=13)” - “l_knee_y (id=14)” on a besoin d’un câble d'au moins 20cm de long et pour la connexion USB HUB 4 PORTS - SMPS2 Dynamixel d’un câble de 60cm.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/1.tiff" align="bottom" width="214" height="244" >]
@@ -96,7 +96,7 @@ from poppytools.configuration.config import poppy_config <BR>
 poppy = pypot.robot.from_config(poppy_config) <BR>
 poppy.start_sync()* <BR>
 
-“poppy_config.json” décrit pour chaque moteur l’offset, le type, l’id et l’angle_limit. Il faut que nous vérifions qu'on utilise la même configuration des moteurs quand on travail avec différents programmes et codes. (Voir figure 4)
+“poppy_config.json” décrit pour chaque moteur l’offset, le type, l’id et l’angle_limit. Il faut que nous vérifions qu'on utilise la même configuration des moteurs quand on travail avec différents programmes et codes. (Voir la figure suivant)
 
 &nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png" align="bottom" width="500" height="450" >]
