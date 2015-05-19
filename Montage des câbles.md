@@ -97,15 +97,11 @@ poppy.start_sync()* <BR>
 
 “poppy_config.json” décrit pour chaque moteur l’offset, le type, l’id et l’angle_limit. Il faut que nous vérifions qu'on utilise la même configuration des moteurs quand on travail avec différents programmes et codes. (Voir figure 4)
 
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff" align="bottom" width="200" height="400">]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff)  
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png" width="500" height="400">]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png)  
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff" align="bottom" width="200" height="400" >]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff)
-&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png" width="240" height="400" >]
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png" align="bottom" width="500" height="450" >]
 (http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png)
+&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff" width="200" height="450" >]
+(http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff)
 
 La première chose à faire est de vérifier que le configuration du robot avec les moteurs en position 0° est come l’image suivant:
 
