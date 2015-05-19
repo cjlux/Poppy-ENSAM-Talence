@@ -3,8 +3,8 @@
 
 On peut diviser le robot en deux parties pour la description du montage des câbles: le haut (en rouge) et le bas (en vert). Chaque partie a un Bioloid 3P Extension Board et un SMPS2 Dynamixel.
 
-[<img src="http://147.210.74.152/Poppy/Montage_des_câbles/6.png" align="bottom" width="595" height="355">]
-(http://147.210.74.152/Poppy/Montage_des_câbles/6.png)  
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/6.png" align="bottom" width="595" height="355">]
+(http://147.210.74.152/Poppy/6_Montage_des_câbles/6.png)  
 
 ## HAUT DU CORPS
 
