@@ -3,6 +3,9 @@
 
 On peut diviser le robot en deux parties pour la description du montage des câbles: le haut (en rouge) et le bas (en vert). Chaque partie a un Bioloid 3P Extension Board et un SMPS2 Dynamixel.
 
+[<img src="http://147.210.74.152/Poppy/Montage_des_câbles/6.png" align="bottom" width="595" height="355">]
+(http://147.210.74.152/Poppy/Montage_des_câbles/6.png)  
+
 ## HAUT DU CORPS
 
 Le Bioloid 3P Extension Board du haut du corps est connecté au SMPS2 Dynamixel et aux moteurs “head_y (id=37)”, “head_z (id=36)”, “r_shoulder_y (id=51)”, “l_shoulder_y (id=41)” et “bust_x (id=35)”. Enfin, la partie supérieure du robot est attachée à l’USB HUB 4 PORTS par le moteur “head_y (id=37)”.
