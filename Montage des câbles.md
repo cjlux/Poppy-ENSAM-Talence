@@ -97,9 +97,9 @@ poppy.start_sync()* <BR>
 
 “poppy_config.json” décrit pour chaque moteur l’offset, le type, l’id et l’angle_limit. Il faut que nous vérifions qu'on utilise la même configuration des moteurs quand on travail avec différents programmes et codes. (Voir figure 4)
 
+&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png" align="bottom" width="500" height="450" >]
 (http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png)
-&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff" width="200" height="450" >]
 (http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff)
 
