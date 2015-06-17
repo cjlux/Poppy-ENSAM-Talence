@@ -113,16 +113,16 @@ poppy.start_sync()* <BR>
 “poppy_config.json” décrit pour chaque moteur l’offset, le type, l’id et l’angle_limit. Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes. (Voir la figure suivant)
 
 &nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png" align="bottom" width="500" height="450" >]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png)
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff" width="200" height="450" >]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/2.tiff)
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/7.png" align="bottom" width="500" height="450" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cacbles/7.png)
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/2.tiff" width="200" height="450" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/2.tiff)
 
 La première chose à faire est de vérifier que le configuration du robot avec les moteurs en position 0° est come l’image suivant:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/5.jpg" align="bottom" width="250" height="450">]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/5.jpg)  
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/5.jpg" align="bottom" width="250" height="450">]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/5.jpg)  
 
 On peut le faire avec le code starting_position.py:
 
@@ -152,8 +152,8 @@ print m,"\n"* <BR>
 Si le robbot ne se présente pas comme sur l'image, il faut changer la configuration des moteurs mécaniquement ou avec l’offset. Le programme Herborist peut aider dans cette tâche et pour tester les moteurs, mais il a une configuration de l’offset différente de celle précédemment établie.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/8.png" align="bottom" width="595" height="355">]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/8.png)  
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/8.png" align="bottom" width="595" height="355">]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/8.png)  
 
 **N.B.** Il faut toujours définir la vitesse de déplacement, parce que la fonction m.goto_position établit une vitesse de la trajectoire qui peut être égal à 0. Dans ce cas, cette vitesse reste stocké dans la configuration du moteur et il ne bouge pas jusqu'à ce qu’on posera m.moving_speed différent de 0.
 
