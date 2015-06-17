@@ -32,8 +32,8 @@ La partie inférieure du robot est attachée à l’USB HUB 4 PORTS par le "SMPS
 Pour connecter les moteurs “r_hip_y (id=23)”, “r_knee_y (id=24)” et “l_hip_y (id=13)”, “l_knee_y (id=14)” on a besoin d’un câble d'au moins 20cm de long, et pour la connexion "USB HUB 4 PORTS" au "SMPS2 Dynamixel" d’un câble de 60cm.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/1.tiff" align="bottom" width="214" height="244" >]
-(http://147.210.74.152/Poppy/6_Montage_des_cables/1.tiff)
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/1.png" align="bottom" width="214" height="244" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/1.png)
 &nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/3.jpg" width="240" height="244" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/3.jpg)
