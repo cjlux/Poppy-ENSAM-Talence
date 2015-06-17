@@ -115,8 +115,8 @@ poppy.start_sync()* <BR>
 &nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/7.png" align="bottom" width="500" height="450" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cacbles/7.png)
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/2.tiff" width="200" height="450" >]
-(http://147.210.74.152/Poppy/6_Montage_des_cables/2.tiff)
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/2.png" width="200" height="450" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/2.png)
 
 La première chose à faire est de vérifier que le configuration du robot avec les moteurs en position 0° est come l’image suivant:
 
