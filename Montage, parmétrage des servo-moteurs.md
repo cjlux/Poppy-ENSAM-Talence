@@ -61,11 +61,11 @@ Pour vérifier si vous faites partie du groupe dialout, taper la commande `id` :
   - **DynamixelWizard** inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
 
 Procédure :  
-[<img src="http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.png" align="center" width="180">.mp4]
-(http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.mp4)
+[<img src="http://147.210.74.152/Poppy/Videos/servomoteurs_et_parametrages_win.png" align="center" width="180">.mp4]
+(http://147.210.74.152/Poppy/Videos/servomoteurs_et_parametrages_win.mp4)
 &nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.png" align="center" width="180">.ogv]
-(http://147.210.74.152/Poppy/Videos/servomoteur_et_parametrage_win.ogv)
+[<img src="http://147.210.74.152/Poppy/Videos/servomoteurs_et_parametrages_win.png" align="center" width="180">.ogv]
+(http://147.210.74.152/Poppy/Videos/servomoteurs_et_parametrages_win.ogv)
 
 
 [ :arrow_left: Vérification du kit] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/V%C3%A9rification%20du%20kit.md)
