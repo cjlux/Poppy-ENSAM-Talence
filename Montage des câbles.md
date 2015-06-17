@@ -3,9 +3,9 @@
 
 On peut diviser le robot en deux parties pour la description du câblage : le haut (en rouge) et le bas (en vert). 
 Chaque partie utilise :
-- un "Bioloid 3P Extension Board" (multiprise pour les connecteurs 3 pins (3P)) [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png" align="bottom"]
+- un "Bioloid 3P Extension Board" (multiprise pour les connecteurs 3 pins (3P)) [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png">]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png)   
-- un "SMPS2 Dynamixel" (alimentation 12 V pour les servomoteurs) [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png" align="bottom"]
+- un "SMPS2 Dynamixel" (alimentation 12 V pour les servomoteurs) [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png">]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png) 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
