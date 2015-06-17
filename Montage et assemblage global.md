@@ -2,7 +2,6 @@
 
 ## Jambes
 
-Assemblage des jambes : 
 [<img src="http://147.210.74.152/Poppy/Videos/assemblage_jambe.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/assemblage_jambe.mp4)
 &nbsp;&nbsp;
@@ -11,7 +10,6 @@ Assemblage des jambes :
 
 ## Bras
 
-Assemblage des bras : 
 [<img src="http://147.210.74.152/Poppy/Videos/assemblage_bras.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/assemblage_bras.mp4)
 &nbsp;&nbsp;
@@ -20,16 +18,24 @@ Assemblage des bras :
 
 ## Bassin
 
-Assemblage du bassin : 
 [<img src="http://147.210.74.152/Poppy/Videos/bassin.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/bassin.mp4)
 &nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/Videos/bassin.png" align="center" width="180">.ogv]
 (http://147.210.74.152/Poppy/Videos/bassin.ogv)
 
+
+## Torse
+
+[<img src="http://147.210.74.152/Poppy/Videos/torse.png" align="center" width="180">.mp4]
+(http://147.210.74.152/Poppy/Videos/torse.mp4)
+&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/Videos/torse.png" align="center" width="180">.ogv]
+(http://147.210.74.152/Poppy/Videos/torse.ogv)
+
+
 ## Tronc
 
-Assemblage du tranc : 
 [<img src="http://147.210.74.152/Poppy/Videos/colonne.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/colonne.mp4)
 &nbsp;&nbsp;
@@ -38,18 +44,16 @@ Assemblage du tranc :
 
 ## Tête
 
-Assemblage de la tête : 
 [<img src="http://147.210.74.152/Poppy/Videos/Tete.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/Tete.mp4)
 &nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/Videos/Tete.png" align="center" width="180">.ogv]
 (http://147.210.74.152/Poppy/Videos/Tete.ogv)
 
-# Montage
+# Assemblage
 
 ## Jambes
 
-Assemblage jambes sur bassin  : 
 [<img src="http://147.210.74.152/Poppy/Videos/jambe_sur_bassin.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/jambe_sur_bassin.mp4)
 &nbsp;&nbsp;
