@@ -1,7 +1,10 @@
-# Montage des câbles
+# Câblage des servomoteurs
 ---
 
-On peut diviser le robot en deux parties pour la description du montage des câbles: le haut (en rouge) et le bas (en vert). Chaque partie a un Bioloid 3P Extension Board et un SMPS2 Dynamixel.
+On peut diviser le robot en deux parties pour la description du câblage : le haut (en rouge) et le bas (en vert). 
+Chaque partie utilise :
+- un "Bioloid 3P Extension Board" (multiprise pour les connecteurs 3 pins (3P)) 
+- un "SMPS2 Dynamixel" (alimentation 12 V pour les servomoteurs).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/6.png" align="bottom" width="595" height="355">]
@@ -9,24 +12,35 @@ On peut diviser le robot en deux parties pour la description du montage des câb
 
 ## HAUT DU CORPS
 
-Le Bioloid 3P Extension Board du haut du corps est connecté au SMPS2 Dynamixel et aux moteurs “head_y (id=37)”, “head_z (id=36)”, “r_shoulder_y (id=51)”, “l_shoulder_y (id=41)” et “bust_x (id=35)”. Enfin, la partie supérieure du robot est attachée à l’USB HUB 4 PORTS par le moteur “head_y (id=37)”.
+Le "Bioloid 3P" du haut du corps est connecté au "SMPS2 Dynamixel" et aux moteurs :
+- “head_y (id=37)”, 
+- “head_z (id=36)”, 
+- “r_shoulder_y (id=51)”, 
+- “l_shoulder_y (id=41)”
+- “bust_x (id=35)”. 
+Enfin, la partie supérieure du robot est attachée à l’USB HUB 4 PORTS par le moteur “head_y (id=37)”.
 
 ## BAS DU CORPS
 
-Le Bioloid 3P Extension Board du bas du corps est connecté au SMPS2 Dynamixel et aux moteurs “r_hip_x (id=11)” et “l_hip_x (id=21)”. La partie inférieure du robot est attachée à l’USB HUB 4 PORTS par le SMPS2 Dynamixel.
-Pour connecter les moteurs “r_hip_y (id=23)” - “r_knee_y (id=24)” et “l_hip_y (id=13)” - “l_knee_y (id=14)” on a besoin d’un câble d'au moins 20cm de long et pour la connexion USB HUB 4 PORTS - SMPS2 Dynamixel d’un câble de 60cm.
+Le "Bioloid 3P du bas du corps est connecté au "SMPS2 Dynamixel" et aux moteurs :
+- “r_hip_x (id=11)”
+- “l_hip_x (id=21)”. 
+La partie inférieure du robot est attachée à l’USB HUB 4 PORTS par le "SMPS2 Dynamixel".
+
+Pour connecter les moteurs “r_hip_y (id=23)”, “r_knee_y (id=24)” et “l_hip_y (id=13)”, “l_knee_y (id=14)” on a besoin d’un câble d'au moins 20cm de long, et pour la connexion "USB HUB 4 PORTS" au "SMPS2 Dynamixel" d’un câble de 60cm.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/1.tiff" align="bottom" width="214" height="244" >]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/1.tiff)
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/1.tiff" align="bottom" width="214" height="244" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/1.tiff)
 &nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/3.jpg" width="240" height="244" >]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/3.jpg)
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/3.jpg" width="240" height="244" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/3.jpg)
 &nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/4.jpg" width="240" height="244" >]
-(http://147.210.74.152/Poppy/6_Montage_des_câbles/4.jpg)
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/4.jpg" width="240" height="244" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cables/4.jpg)
 
-## PREMIER DÉMARRAGE DU ROBOT
+## Premier démarrage du robot  
+(pilotage avec un portable Linux)
 
 Après avoir branché l’alimentation, on peut vérifier que chaque moteur est détecté avec le code suivant:
 
@@ -53,18 +67,16 @@ le résultat devrait être:
 /dev/ttyACM0 <BR>
 [31, 32, 33, 34, 35, 36, 37, 41, 42, 43, 44, 45, 51, 52, 53, 54]* <BR>
 
-IL veut dire que tous les moteurs sont détectés.
+L'affichage montre que tous les moteurs sont détectés.
 Ensuite, on doit créer le fichier de configuration de Poppy avec:
 
 `cd path/to/poppy-software`<BR>
 `cd poppytools/configuration` <BR>
 `python poppy_config_generation.py` <BR>
 
-
 où il faut définir les ports “/dev/ttyACM1” et “/dev/ttyACM0”:
 
 “poppy_config_generation.py”
-
 
 *poppy_config={} <BR>
 poppy_config['controllers'] = {} <BR>
@@ -84,7 +96,7 @@ poppy_config['controllers']['upper_body_controller'] = { <BR>
 ...* <BR>
 
 
-Il va créer un fichier de .json avec la configuration du robot. Maintenant, on peut créer poppy robot comme ça:
+Il va créer un fichier de .json avec la configuration du robot. Maintenant, on peut créer la configuration du robot comme suit :
 `cd Bureau/poppy/my_code` <BR>
 `python create_poppy.py` <BR>
 
@@ -96,7 +108,7 @@ from poppytools.configuration.config import poppy_config <BR>
 poppy = pypot.robot.from_config(poppy_config) <BR>
 poppy.start_sync()* <BR>
 
-“poppy_config.json” décrit pour chaque moteur l’offset, le type, l’id et l’angle_limit. Il faut que nous vérifions qu'on utilise la même configuration des moteurs quand on travail avec différents programmes et codes. (Voir la figure suivant)
+“poppy_config.json” décrit pour chaque moteur l’offset, le type, l’id et l’angle_limit. Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes. (Voir la figure suivant)
 
 &nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/7.png" align="bottom" width="500" height="450" >]
@@ -135,7 +147,7 @@ print 'final position' <BR>
 for m in poppy.motors: <BR>
 print m,"\n"* <BR>
 
-Si il n’est pas comme cela, il faut changer la configuration des moteurs mécaniquement ou avec l’offset. Le programme Herborist peut aider dans cette tâche et pour tester les moteurs, mais il a une configuration de l’offset différente de celle précédemment établie.
+Si le robbot ne se présente pas comme sur l'image, il faut changer la configuration des moteurs mécaniquement ou avec l’offset. Le programme Herborist peut aider dans cette tâche et pour tester les moteurs, mais il a une configuration de l’offset différente de celle précédemment établie.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_câbles/8.png" align="bottom" width="595" height="355">]
