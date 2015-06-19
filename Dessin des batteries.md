@@ -30,3 +30,8 @@
 &nbsp;&nbsp;&nbsp; - Lithium: elles sont légers, le temps de décharge est élevé et elles ont relativement bonne capacité. La <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tension augmente dans les étapes de 3.7V. Par <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conséquent, les solutions possibles sont les suivants: <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. trois batteries de 3.7V, poids: 45g chacune, 			 <BR>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prix chaque batterie: 20€ <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. une batterie de 11.1V, poids: 150g, prix: 50 € <BR>
+
+**Emplacement:** dans le cas de seulement une batterie, la seule solution est de la fixer au abs_x moteur (id = 32). Le problème de cette solution est que la partie supérieure du robot est déjà assez lourd et il va faire la dynamique du robot plus difficile. 
+
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.tiff" width="200" height="450" >]
+(http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.tiff)
