@@ -65,5 +65,6 @@ Caractéristiques:
 
 ##ALGORITHME ‘FACE RECOGNITION’
 
-Le code suivant est utilisé pour ajouter un algorithme de face recognition à la presentation du robot.
+Le code suivant est utilisé pour ajouter un algorithme de face recognition à la presentation du robot.<BR>
 Pour l’utilisation il faut avoir:
+
