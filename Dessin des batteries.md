@@ -66,3 +66,11 @@ Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image su
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff" width="190" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff)
+
+**Solution mise en œuvre:**
+
+&nbsp;&nbsp;&nbsp; - 3 Accumulateurs LG Lithium-Ion  en série avec les caractéristiques suivantes:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.tiff" width="190" height="80" >]
+(http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.tiff)
