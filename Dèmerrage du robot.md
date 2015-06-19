@@ -136,9 +136,9 @@ ShakingLegs() <BR>
 time.sleep(0.5) <BR>
 Hands2tab() <BR>
 time.sleep(1) <BR>
-PlayHello() <BR>
+PlayHello()* <BR>
 **ask different options** <BR>
-AskWhat2Do1() <BR>
+*AskWhat2Do1() <BR>
 while True: <BR>
     AskKeyPress() <BR>
     if char == 'r': <BR>
@@ -157,9 +157,9 @@ while True: <BR>
         PlayRecord() <BR>
         AskWhat2Do2() <BR>
         char = None <BR>
-else: break <BR>
+else: break* <BR>
 **final position** <BR>
-time.sleep(1) <BR>
+*time.sleep(1) <BR>
 FinalPos() <BR>
 print 'going to finish...' <BR>
 raw_input("press Enter if you want to make the motors compliant..") <BR>
