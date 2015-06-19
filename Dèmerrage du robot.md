@@ -173,5 +173,6 @@ Les images suivantes montrent les trois modes possibles:
 (http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.tiff)
 
 vidéo: <BR>
+
 [<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/pres.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/7_demerrage_du_robot/Presentation.mp4)
