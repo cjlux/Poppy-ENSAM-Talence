@@ -16,7 +16,7 @@ La tête de la version v1.0 de Poppy Humanoid a été conçu pour tenir:
 
 modifications:
 
-&nbsp;&nbsp;&nbsp; - l'écran a été remplacé par une pièce en plastique
+&nbsp;&nbsp;&nbsp; - l'écran a été remplacé par une pièce en plastique <BR>
 &nbsp;&nbsp;&nbsp; - un petit trou a été ajouté pour la sortie des câbles à l'arrière de la tête
 
 ##CARTE ODROID U3
