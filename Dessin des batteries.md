@@ -33,5 +33,6 @@
 
 **Emplacement:** dans le cas de seulement une batterie, la seule solution est de la fixer au abs_x moteur (id = 32). Le problème de cette solution est que la partie supérieure du robot est déjà assez lourd et il va faire la dynamique du robot plus difficile. 
 
-[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.tiff" width="200" height="450" >]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.tiff" width="400" height="200" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.tiff)
