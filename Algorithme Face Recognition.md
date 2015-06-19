@@ -72,3 +72,7 @@ Le mot “cascade" signifie que le classificateur se compose de plusieurs classi
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avec une valeur haute on a moins détections mais avec une qualité supérieure.
 
 &nbsp;&nbsp;&nbsp; - minSize: Objets plus petits que cette valeur sont ignorés. On peut voir un exemple dans les images suivants:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/10_face_recognition/f17.tiff" align="bottom" width="700" height="355">]
+(http://147.210.74.152/Poppy/10_face_recognition/f17.tiff)  
