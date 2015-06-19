@@ -41,6 +41,29 @@ Caractéristiques:
 [<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.tiff" width="500" height="250" >]
 (http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.tiff)
 
-##LA CAMÉRA JDEPC-OV05
+##LA CAMÉRA
 
+&nbsp;&nbsp;&nbsp; - connexion USB
+&nbsp;&nbsp;&nbsp; - un petit PCB (le ‘printed circuit board’ augmente la versatilité de la camera et réduit l'espace nécessaire)
+&nbsp;&nbsp;&nbsp; - une petite lentille qui n’est pas visible sur la tête de Poppy
+&nbsp;&nbsp;&nbsp; - facilement accessible
 
+**Solution mise en œuvre:**
+
+&nbsp;&nbsp;&nbsp; - Caméra JDEPC-OV05:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 1/4” CMOS capteur d’image avec haute qualité
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - interface USB 1.1/2.0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - pas besoin de driver pour Linux
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - fonction vision nocturne
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - caméra a petit volume
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - haute fiabilité
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - taille: 60 * 8.0 * 6.6 mm
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f16.tiff" width="350" height="250" >]
+(http://147.210.74.152/Poppy/9_la_tete_du_robot/f16.tiff)
+
+##ALGORITHME ‘FACE RECOGNITION’
+
+Le code suivant est utilisé pour ajouter un algorithme de face recognition à la presentation du robot.
+Pour l’utilisation il faut avoir:
