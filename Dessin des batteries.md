@@ -52,7 +52,7 @@ Par conséquent, une augmentation approximative de 100g pour chaque jambe ne va 
 Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image suivant.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff" width="200" height="100" >]
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff" width="350" height="140" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff)
 
 Par conséquent, une augmentation approximative de 100g pour chaque jambe ne va pas être un problème.
@@ -64,5 +64,5 @@ Par conséquent, une augmentation approximative de 100g pour chaque jambe ne va 
 Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image suivant.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff" width="200" height="100" >]
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff" width="190" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff)
