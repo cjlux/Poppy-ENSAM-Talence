@@ -15,7 +15,7 @@ sudo apt-get install python-opencv <BR>
 
 ##def Recognition(): <BR>
 
-	*cascPath = os.getcwd()+'/haarcascades/haarcascade_frontalface_alt2.xml' # Name of the file from which the classifier is <BR> loaded. It is a trained classifier for detecting faces <BR>
+	cascPath = os.getcwd()+'/haarcascades/haarcascade_frontalface_alt2.xml' # Name of the file from which the classifier is <BR> loaded. It is a trained classifier for detecting faces <BR>
 	faceCascade = cv2.CascadeClassifier(cascPath) #Object detector <BR>
 	video_capture = cv2.VideoCapture(0) #It sets the video source to the default webcam <BR>
 	flag = 1 <BR>
@@ -56,7 +56,7 @@ sudo apt-get install python-opencv <BR>
 		video_capture.release() <BR>
 		cv2.destroyAllWindows()	 <BR>
 		BackPosition() <BR>
-		pass* <BR>
+		pass <BR>
 		
 Le détecteur d'objet décrit a été initialement proposée par Paul Viola et développé par Rainer Lienhart.
 Tout d’abord, un classificateur est formé avec quelques image d’example d'un objet particulier (dans ce cas un visage) appelés exemples positifs qui ont tous la même taille (par exemple, 30x30), et des exemples négatifs qui sont images arbitraires de la même taille.
