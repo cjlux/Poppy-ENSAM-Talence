@@ -62,9 +62,3 @@ Caractéristiques:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f16.tiff" width="350" height="250" >]
 (http://147.210.74.152/Poppy/9_la_tete_du_robot/f16.tiff)
-
-##ALGORITHME ‘FACE RECOGNITION’
-
-Le code suivant est utilisé pour ajouter un algorithme de face recognition à la presentation du robot.<BR>
-Pour l’utilisation il faut avoir:
-
