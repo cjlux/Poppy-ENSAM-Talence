@@ -169,5 +169,5 @@ Les images suivantes montrent les trois modes possibles:
 [<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff" align="bottom" width="800" height="290">]
 (http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff) 
 
-[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.tiff" align="bottom" width="800" height="200">]
+[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.tiff" align="bottom" width="780" height="200">]
 (http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.tiff)
