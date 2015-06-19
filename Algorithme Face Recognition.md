@@ -23,11 +23,8 @@ def Recognition(): <BR>
 		while True: <BR>
 		    # Capture frame-by-frame <BR>
 			ret, frame = video_capture.read() <BR>
-		
 			if not ret: continue <BR>
-
 		    	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #Converts an image from one color space to another <BR>
-
 		    	faces = faceCascade.detectMultiScale(  <BR>
 				gray, # Matrix of the type CV_8U containing an image where objects are detected <BR>
 				scaleFactor=1.1, #Parameter specifying how much the image size is reduced at each image scale  <BR>
@@ -46,17 +43,13 @@ def Recognition(): <BR>
 					k[idm54].goto_position(80, 2.0)  <BR>
 					k[idm51].goto_position(-100, 2.0) <BR>
 					flag= 11 <BR>
-
 		    # Draw a rectangle around the faces <BR>
 			for (x, y, w, h) in faces: <BR>
 				cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2) <BR>
-
 		    # Display the resulting frame <BR>
 			cv2.imshow('Video', frame) <BR>
-
 			if cv2.waitKey(1) & 0xFF == ord('q'): <BR>
 				break <BR>
-
 	# When everything is done, release the capture <BR>
 	except KeyboardInterrupt: <BR>
 		video_capture.release() <BR>
