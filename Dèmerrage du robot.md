@@ -126,7 +126,7 @@ Le code suivant est utilisé pour une petit presentation du robot. Il employe le
 
 **main program** <BR>
 **starting presentation** <BR>
-'StartingPos() <BR>
+`StartingPos() <BR>
 SittingPos() <BR>
 print 'sit down the robot and hold it from the handle pls' <BR>
 raw_input("press Enter if you are ready to continue..") <BR>
@@ -162,7 +162,7 @@ time.sleep(1) <BR>
 FinalPos() <BR>
 print 'going to finish...' <BR>
 raw_input("press Enter if you want to make the motors compliant..") <BR>
-MotorsCompl()' <BR>
+MotorsCompl()` <BR>
 
 Les images suivantes montrent les trois modes possibles:
 
