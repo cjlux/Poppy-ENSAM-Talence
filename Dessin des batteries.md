@@ -1,4 +1,4 @@
-## dessin des batteries
+## DESSIN DES BATTERIES
 
 **Consommation d’énergie:** <BR>
 
