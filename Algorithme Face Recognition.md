@@ -65,5 +65,10 @@ Le mot “cascade" signifie que le classificateur se compose de plusieurs classi
 
 **Paramètres**
 
-&nbsp;&nbsp;&nbsp; - scaleFactor: le modèle a une taille fixe définie au cours de la formation, qui est visible dans le<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“/haarcascades/haarcascade_frontalface_alt2.xml”. Ça signifie que cette taille de visage <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;est détecté dans l'image d’origine mais on peut redimensionner une grande face à <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uneplus petite qui est détectable pour l'algorithme. <BR>
+&nbsp;&nbsp;&nbsp; - scaleFactor: le modèle a une taille fixe définie au cours de la formation, qui est visible dans le<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“/haarcascades/haarcascade_frontalface_alt2.xml”. Ça signifie que cette taille de visage <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;est détecté dans l'image d’origine mais on peut redimensionner une grande face à <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uneplus petite qui est détectable pour l'algorithme. <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1 est une bonne valeur possible parce que vous augmentez les chances d'une taille <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;correspondant au modèle de détection est trouvé.
+
+&nbsp;&nbsp;&nbsp; -  minNeighbors: Ce paramètre aura une incidence sur la qualité des visages détectés. <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avec une valeur haute on a moins détections mais avec une qualité supérieure.
+
+&nbsp;&nbsp;&nbsp; - minSize: Objets plus petits que cette valeur sont ignorés. On peut voir un exemple dans les images suivants:
