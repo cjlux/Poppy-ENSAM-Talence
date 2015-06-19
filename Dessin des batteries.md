@@ -54,3 +54,15 @@ Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image su
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff" width="200" height="100" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff)
+
+Par conséquent, une augmentation approximative de 100g pour chaque jambe ne va pas être un problème.
+
+**Consommation d’énergie par Odroid U3:**<BR>
+
+&nbsp;&nbsp;&nbsp; - puissance: 5V / 2A 
+
+Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image suivant.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff" width="200" height="100" >]
+(http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff)
