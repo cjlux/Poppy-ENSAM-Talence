@@ -126,7 +126,6 @@ Le code suivant est utilisé pour une petit presentation du robot. Il employe le
 
 **main program** <BR>
 **starting presentation** <BR>
-
 *StartingPos() <BR>
 SittingPos() <BR>
 print 'sit down the robot and hold it from the handle pls' <BR>
@@ -140,23 +139,23 @@ PlayHello()* <BR>
 **ask different options** <BR>
 *AskWhat2Do1() <BR>
 while True: <BR>
-    AskKeyPress() <BR>
-    if char == 'r': <BR>
-        Recording() <BR>
-        AskWhat2Do2() <BR>
-        char = None <BR>
-    elif char == 'c': <BR>
-        CopyArm() <BR>
-        AskWhat2Do1() <BR>
-        char = None <BR>
-    elif char == 'p': <BR>
-        Presentation() <BR>
-        AskWhat2Do1() <BR>
-        char = None <BR>
-    elif char == 'm': <BR>
-        PlayRecord() <BR>
-        AskWhat2Do2() <BR>
-        char = None <BR>
+&nbsp;&nbsp;&nbsp;AskKeyPress() <BR>
+&nbsp;&nbsp;&nbsp;if char == 'r': <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recording() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do2() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
+&nbsp;&nbsp;&nbsp;elif char == 'c': <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CopyArm() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do1() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
+&nbsp;&nbsp;&nbsp;elif char == 'p': <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Presentation() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do1() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
+&nbsp;&nbsp;&nbsp;elif char == 'm': <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayRecord() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do2() <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
 else: break* <BR>
 **final position** <BR>
 *time.sleep(1) <BR>
