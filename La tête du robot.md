@@ -6,19 +6,25 @@
 
 La tête de la version v1.0 de Poppy Humanoid a été conçu pour tenir:
 
-&nbsp;&nbsp;&nbsp; - carte Odroid U3
-&nbsp;&nbsp;&nbsp; - moteur MX-28
-&nbsp;&nbsp;&nbsp; - camera JDEPC-OV05
-&nbsp;&nbsp;&nbsp; - USB HUB 4 ports
-&nbsp;&nbsp;&nbsp; - EDIMAX Wireless 802.11b/g/n
-&nbsp;&nbsp;&nbsp; - J14 VISATON haut-parleur K 20.40
-&nbsp;&nbsp;&nbsp; - Stereo Amplifier MAX 98306
+&nbsp;&nbsp;&nbsp; - carte Odroid U3 <BR>
+&nbsp;&nbsp;&nbsp; - moteur MX-28 <BR>
+&nbsp;&nbsp;&nbsp; - camera JDEPC-OV05 <BR>
+&nbsp;&nbsp;&nbsp; - USB HUB 4 ports <BR>
+&nbsp;&nbsp;&nbsp; - EDIMAX Wireless 802.11b/g/n <BR>
+&nbsp;&nbsp;&nbsp; - J14 VISATON haut-parleur K 20.40 <BR>
+&nbsp;&nbsp;&nbsp; - Stereo Amplifier MAX 98306 <BR>
 
 modifications:
+
 &nbsp;&nbsp;&nbsp; - l'écran a été remplacé par une pièce en plastique
 &nbsp;&nbsp;&nbsp; - un petit trou a été ajouté pour la sortie des câbles à l'arrière de la tête
 
 ##CARTE ODROID U3
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f14.tiff" width="250" height="250" >]
 (http://147.210.74.152/Poppy/9_la_tete_du_robot/f14.tiff)
+
+Caractéristiques:
+
+&nbsp;&nbsp;&nbsp; -
