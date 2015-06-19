@@ -136,7 +136,7 @@ time.sleep(0.5) <BR>
 Hands2tab() <BR>
 time.sleep(1) <BR>
 PlayHello() <BR>
-#ask different options <BR>
+**ask different options** <BR>
 AskWhat2Do1() <BR>
 while True: <BR>
     AskKeyPress() <BR>
