@@ -17,7 +17,7 @@ La tête de la version v1.0 de Poppy Humanoid a été conçu pour tenir:
 modifications:
 
 &nbsp;&nbsp;&nbsp; - l'écran a été remplacé par une pièce en plastique <BR>
-&nbsp;&nbsp;&nbsp; - un petit trou a été ajouté pour la sortie des câbles à l'arrière de la tête
+&nbsp;&nbsp;&nbsp; - un petit trou a été ajouté pour la sortie des câbles à l'arrière de la tête <BR>
 
 ##CARTE ODROID U3
 
@@ -27,15 +27,15 @@ modifications:
 
 Caractéristiques:
 
-&nbsp;&nbsp;&nbsp; - The Powerful Linux Computer
-&nbsp;&nbsp;&nbsp; - 1.7GHz Quad-Core processor and 2GByte RAM
-&nbsp;&nbsp;&nbsp; - 10/100Mbps Ethernet with RJ-45 LAN Jack
-&nbsp;&nbsp;&nbsp; - 3 x High speed USB2.0 Host ports
-&nbsp;&nbsp;&nbsp; - Audio codec with headphone jack on board
-&nbsp;&nbsp;&nbsp; - GPIO/UART/I2C ports
-&nbsp;&nbsp;&nbsp; - XUbuntu 13.10 or Android 4.x  Operating System
-&nbsp;&nbsp;&nbsp; - Taille : 83 x 48 mm, Poids : 48g including heat sink
-&nbsp;&nbsp;&nbsp; - Package includes the main board and the heat sink
+&nbsp;&nbsp;&nbsp; - The Powerful Linux Computer <BR>
+&nbsp;&nbsp;&nbsp; - 1.7GHz Quad-Core processor and 2GByte RAM <BR>
+&nbsp;&nbsp;&nbsp; - 10/100Mbps Ethernet with RJ-45 LAN Jack <BR>
+&nbsp;&nbsp;&nbsp; - 3 x High speed USB2.0 Host ports <BR>
+&nbsp;&nbsp;&nbsp; - Audio codec with headphone jack on board <BR>
+&nbsp;&nbsp;&nbsp; - GPIO/UART/I2C ports <BR>
+&nbsp;&nbsp;&nbsp; - XUbuntu 13.10 or Android 4.x  Operating System <BR>
+&nbsp;&nbsp;&nbsp; - Taille : 83 x 48 mm, Poids : 48g including heat sink <BR>
+&nbsp;&nbsp;&nbsp; - Package includes the main board and the heat sink <BR>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.tiff" width="500" height="250" >]
@@ -43,21 +43,21 @@ Caractéristiques:
 
 ##LA CAMÉRA
 
-&nbsp;&nbsp;&nbsp; - connexion USB
-&nbsp;&nbsp;&nbsp; - un petit PCB (le ‘printed circuit board’ augmente la versatilité de la camera et réduit l'espace nécessaire)
-&nbsp;&nbsp;&nbsp; - une petite lentille qui n’est pas visible sur la tête de Poppy
-&nbsp;&nbsp;&nbsp; - facilement accessible
+&nbsp;&nbsp;&nbsp; - connexion USB <BR>
+&nbsp;&nbsp;&nbsp; - un petit PCB (le ‘printed circuit board’ augmente la versatilité de la camera et réduit l'espace <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nécessaire) <BR>
+&nbsp;&nbsp;&nbsp; - une petite lentille qui n’est pas visible sur la tête de Poppy <BR>
+&nbsp;&nbsp;&nbsp; - facilement accessible <BR>
 
 **Solution mise en œuvre:**
 
-&nbsp;&nbsp;&nbsp; - Caméra JDEPC-OV05:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 1/4” CMOS capteur d’image avec haute qualité
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - interface USB 1.1/2.0
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - pas besoin de driver pour Linux
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - fonction vision nocturne
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - caméra a petit volume
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - haute fiabilité
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - taille: 60 * 8.0 * 6.6 mm
+&nbsp;&nbsp;&nbsp; - Caméra JDEPC-OV05: <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 1/4” CMOS capteur d’image avec haute qualité <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - interface USB 1.1/2.0 <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - pas besoin de driver pour Linux <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - fonction vision nocturne <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - caméra a petit volume <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - haute fiabilité <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - taille: 60 * 8.0 * 6.6 mm <BR>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f16.tiff" width="350" height="250" >]
