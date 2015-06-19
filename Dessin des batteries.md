@@ -74,3 +74,7 @@ Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image su
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.tiff" width="400" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.tiff)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.tiff" width="350" height="160" >]
+(http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.tiff)
