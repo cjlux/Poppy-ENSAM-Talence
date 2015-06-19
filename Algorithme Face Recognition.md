@@ -63,5 +63,7 @@ Après que le classificateur est formé, il peut être appliqué à une région 
 Le classificateur est conçu de sorte qu'il peut être facilement redimensionné afin de trouver les objets d’intérêt des tailles différentes, ce qui est plus efficace que le redimensionnement de l'image elle-même.
 Le mot “cascade" signifie que le classificateur se compose de plusieurs classificateurs similaires (étapes) qui sont appliqués à une région d'intérêt jusqu'à le candidat est rejeté ou toutes les étapes sont transmis. Les classificateurs de base sont classificateurs ‘decision-tree’ avec au moins 2 feuilles.
 
- 
+**Paramètres**
 
+&nbsp;&nbsp;&nbsp; - scaleFactor: le modèle a une taille fixe définie au cours de la formation, qui est visible dans le &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“/haarcascades/haarcascade_frontalface_alt2.xml”. Ça signifie 	que cette taille de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visage est détecté dans l'image d’origine mais on peut redimensionner une grande face à une &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plus petite qui est détectable pour l'algorithme.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1 est une bonne valeur possible parce que vous augmentez les chances d'une 	taille &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;correspondant au modèle de détection est trouvé.
