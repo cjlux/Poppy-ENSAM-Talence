@@ -113,3 +113,58 @@ Si le robbot ne se présente pas comme sur l'image, il faut changer la configura
 (http://147.210.74.152/Poppy/6_Montage_des_cables/8.png)  
 
 **N.B.** Il faut toujours définir la vitesse de déplacement, parce que la fonction m.goto_position établit une vitesse de la trajectoire qui peut être égal à 0. Dans ce cas, cette vitesse reste stocké dans la configuration du moteur et il ne bouge pas jusqu'à ce qu’on posera m.moving_speed différent de 0.
+
+## Code de présentation du robot
+
+Le code suivant est utilisé pour une petit presentation du robot. Il employe les codes primitives dans poppy-software qui ont été mis au point par l’equipe Flower de l’Inria. Les primitives sont MoveRecorder qui permet d'enregistrer un mouvement du robot décidé par l’utilisateur et ArmsCopyMotion qui permet de bouger les bras du robot en mode miroir.
+
+
+`cd Bureau/poppy/my_code` <BR>
+`python presentation.py`<BR>
+
+“presentation.py”
+
+## main program <BR>
+#starting presentation <BR>
+StartingPos() <BR>
+SittingPos() <BR>
+print 'sit down the robot and hold it from the handle pls' <BR>
+raw_input("press Enter if you are ready to continue..") <BR>
+print 'The presentation is starting..' <BR>
+ShakingLegs() <BR>
+time.sleep(0.5) <BR>
+Hands2tab() <BR>
+time.sleep(1) <BR>
+PlayHello() <BR>
+#ask different options <BR>
+AskWhat2Do1() <BR>
+while True: <BR>
+    AskKeyPress() <BR>
+    if char == 'r': <BR>
+        Recording() <BR>
+        AskWhat2Do2() <BR>
+        char = None <BR>
+    elif char == 'c': <BR>
+        CopyArm() <BR>
+        AskWhat2Do1() <BR>
+        char = None <BR>
+    elif char == 'p': <BR>
+        Presentation() <BR>
+        AskWhat2Do1() <BR>
+        char = None <BR>
+    elif char == 'm': <BR>
+        PlayRecord() <BR>
+        AskWhat2Do2() <BR>
+        char = None <BR>
+else: break <BR>
+#final position <BR>
+time.sleep(1) <BR>
+FinalPos() <BR>
+print 'going to finish...' <BR>
+raw_input("press Enter if you want to make the motors compliant..") <BR>
+MotorsCompl() <BR>
+
+Les images suivantes montrent les trois modes possibles:
+
+[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff" align="bottom" width="595" height="355">]
+(http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff) 
