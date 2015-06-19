@@ -33,13 +33,13 @@
 
 **Emplacement:** dans le cas de seulement une batterie, la seule solution est de la fixer au abs_x moteur (id = 32). Le problème de cette solution est que la partie supérieure du robot est déjà assez lourd et il va faire la dynamique du robot plus difficile. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.tiff" width="350" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.tiff)
 
 Le deuxième cas est quand nous avons trois batteries. Dans cette solution, nous pouvons localiser une batterie de l'alimentation dans chaque jambe (entre la hanche et le genou) et l’autre batterie attaché aux moteurs r_hip_x (id = 11) et l_hip_x (id = 21). La seule limitation de cette solution pourrait être le couple maximal du moteur r_hip_y (id = 23) et l_hip_y (id = 13). Sans la batterie de la dynamique de la jambe de Poppy est faite dans le 21% du couple maximal du moteur 13 et 23. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff" width="350" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff)
 
@@ -51,7 +51,7 @@ Par conséquent, une augmentation approximative de 100g pour chaque jambe ne va 
 
 Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image suivant.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff" width="350" height="140" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.tiff)
 
@@ -63,7 +63,7 @@ Par conséquent, une augmentation approximative de 100g pour chaque jambe ne va 
 
 Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image suivant.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff" width="190" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.tiff)
 
@@ -71,11 +71,11 @@ Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image su
 
 &nbsp;&nbsp;&nbsp; - 3 Accumulateurs LG Lithium-Ion  en série avec les caractéristiques suivantes:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.tiff" width="400" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.tiff)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.tiff" width="350" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.tiff)
 
