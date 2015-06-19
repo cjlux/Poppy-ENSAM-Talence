@@ -16,7 +16,6 @@ sudo apt-get install python-opencv <BR>
 def Recognition(): <BR>
 	cascPath = os.getcwd()+'/haarcascades/haarcascade_frontalface_alt2.xml' # Name of the file from which the classifier is <BR> loaded. It is a trained classifier for detecting faces <BR>
 	faceCascade = cv2.CascadeClassifier(cascPath) #Object detector <BR>
-
 	video_capture = cv2.VideoCapture(0) #It sets the video source to the default webcam <BR>
 	flag = 1 <BR>
 	print 'Press Ctrl-C to stop the current program' <BR>
