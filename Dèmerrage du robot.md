@@ -124,8 +124,8 @@ Le code suivant est utilisé pour une petit presentation du robot. Il employe le
 
 “presentation.py”
 
-- main program <BR>
-- starting presentation <BR>
+# main program <BR>
+# starting presentation <BR>
 StartingPos() <BR>
 SittingPos() <BR>
 print 'sit down the robot and hold it from the handle pls' <BR>
@@ -157,7 +157,7 @@ while True: <BR>
         AskWhat2Do2() <BR>
         char = None <BR>
 else: break <BR>
-- final position <BR>
+# final position <BR>
 time.sleep(1) <BR>
 FinalPos() <BR>
 print 'going to finish...' <BR>
@@ -166,5 +166,5 @@ MotorsCompl() <BR>
 
 Les images suivantes montrent les trois modes possibles:
 
-[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff" align="bottom" width="700" height="355">]
+[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff" align="bottom" width="800" height="355">]
 (http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff) 
