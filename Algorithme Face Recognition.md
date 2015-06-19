@@ -65,5 +65,5 @@ Le mot “cascade" signifie que le classificateur se compose de plusieurs classi
 
 **Paramètres**
 
-&nbsp;&nbsp;&nbsp; - scaleFactor: le modèle a une taille fixe définie au cours de la formation, qui est visible dans le &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“/haarcascades/haarcascade_frontalface_alt2.xml”. Ça signifie 	que cette taille de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visage est détecté dans l'image d’origine mais on peut redimensionner une grande face à une &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plus petite qui est détectable pour l'algorithme.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1 est une bonne valeur possible parce que vous augmentez les chances d'une 	taille &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;correspondant au modèle de détection est trouvé.
+&nbsp;&nbsp;&nbsp; - scaleFactor: le modèle a une taille fixe définie au cours de la formation, qui est visible dans le &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“/haarcascades/haarcascade_frontalface_alt2.xml”. Ça signifie que cette taille de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visage est détecté dans l'image d’origine mais on peut redimensionner une grande face à une &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plus petite qui est détectable pour l'algorithme.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1 est une bonne valeur possible parce que vous augmentez les chances d'une taille &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;correspondant au modèle de détection est trouvé.
