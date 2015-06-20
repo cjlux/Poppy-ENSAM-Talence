@@ -2,8 +2,8 @@
 
 **Consommation d’énergie:** <BR>
 
-&nbsp;&nbsp;&nbsp;- plage de tension: 10 ~14.8V (tension recommandé12V) <BR>
-&nbsp;&nbsp;&nbsp;- courant électrique: minimum (les moteurs sont dans le mode ‘compliant’) 1.53A et le courant maximum <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enregistrée au cours de la présentation est 2A <BR>
+&nbsp;&nbsp;&nbsp;- plage de tension: 10 ~14.8V (tension recommandée 12V) <BR>
+&nbsp;&nbsp;&nbsp;- courant électrique: minimum (les moteurs sont dans le mode ‘compliant’) 1.53A et le courant maximum <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enregistrée au cours d'une séqunec qui met en mouvement tout le haut de Poppy (bras, torse...) est de 2 A <BR>
 
 **Limites de couple (couple de décrochage):** <BR>
 
