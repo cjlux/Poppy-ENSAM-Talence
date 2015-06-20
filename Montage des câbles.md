@@ -27,7 +27,7 @@ Le *Bioloid 3P* du haut du corps est connecté au *SMPS2 Dynamixel* et aux 5 ser
 Le servomoteur `head_y (id=37)` est également connecté au *USB2AX* qui permet la liason avec le *HUB USB 4 PORTS* situé dans la tête.
 
 ## BAS DU CORPS
-Les servomoteurs des 2 jambes sont chaînés depuis la cheville jusqu'uax servomoteurs de la hanche, `r_hip_x (id=11)` et `l_hip_x (id=21)`.
+Les servomoteurs des 2 jambes sont chaînés depuis la cheville jusqu'aux servomoteurs de la hanche, `r_hip_x (id=11)` et `l_hip_x (id=21)`.
 
 Le *Bioloid 3P* du bas du corps est connecté au *SMPS2 Dynamixel* et aux 2 servomoteurs :
 - `r_hip_x (id=11)`
@@ -35,7 +35,7 @@ Le *Bioloid 3P* du bas du corps est connecté au *SMPS2 Dynamixel* et aux 2 serv
 
 Le *SMPS2 Dynamixel* du bas du corsp est connecté au *USB2AX* relié au *USB HUB 4 PORTS* de la tête. Il faut réaliser un câble 3P d'environ 60cm (souder bout à bout plusieurs câbles 3P pour obtenir la longueur voulue).
 
-Pour connecter les moteurs `r_hip_y (id=23)`, `r_knee_y (id=24)`, `l_hip_y (id=13)` et `l_knee_y (id=14)` au  *Bioloid 3P*, on a besoin d’un câble 3P d'environ 20cm de long (souder bout à bout plusieurs câbles 3P pour obtenir la longueur voulue).
+Pour connecter les moteurs `r_hip_y (id=23)` et `r_knee_y (id=24)` (ainsi que `l_hip_y (id=13)` et `l_knee_y (id=14)`) au  *Bioloid 3P*, on a besoin d’un câble 3P d'environ 20cm de long (souder bout à bout plusieurs câbles 3P pour obtenir la longueur voulue).
 
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/1.png" align="bottom" width="214" height="244" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/1.png)
