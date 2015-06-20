@@ -1,31 +1,34 @@
 # DESIGN DES BATTERIES
 
-##Consommation d’énergie
-* plage de tension: 10 à ~14.8V (tension recommandée 12V)
-* courant consommé: 
-  * minimum : moteurs en mode ‘compliant’ -> 1.53 A 
-  * maximum : enregistré au cours d'une séquence qui met en mouvement la partie haute de Poppy (bras, torse...) -> 2 A
+###Consommation d’énergie des servomoteurs
+* plage de tension : 10 à ~14.8V (tension recommandée 12V)
+* courant consommé : 
+  * minimum : moteurs en mode *compliant* -> 1.53 A 
+  * maximum : mesuré lors d'une séquence qui met en mouvement la partie haute de Poppy (bras, torse...) -> 2.5 A
 
-##Limites de couple (couple de décrochage)
+###Limites de couple (couple de décrochage)
 *  MX-64 : 5.5 Nm (at 11.1V, 3.9A), 6.0N.m (at 12V, 4.1A)
 *  MX-28 : 2.3N.m (at 11.1V, 1.3A), 2.5N.m (at 12V, 1.4A)
 
 ##Temps d’autonomie
-- théoriquement on a environ une heure de fonctionnement avec les batteries 2000mAh
+Théoriquement, avec des batteries permettant d'obtenir une capacité de 2600 mAh sous 12 volts, on peut espérer une autonomie de fonctionnement de Poppy proche d'une heure. Tout dépend bien sûr de la façon dont on sollicite les servomoteurs.
 
-##Types d'accumulateurs disponibles
-- **Alkaline**: pas considéré pour ce projet (constamment besoin d'acheter des remplacements)
-- **Nickel**:
- 1. **NiCd**: Ces batteries sont en train de disparaître à cause de leur effet mémoire.
- 2. **NiMh**: ils sont rechargeables (il n'y a presque pas d'effet mémoire), offrent un bon compromis (prix/capacité/poids), mais un long temps de charge est nécessaire. Exemple : 12V pour poids de 540g à partir de 40 $.
-- Lead acid: ces batteries ont le défaut d'être très volumineuses et lourdes, elles doivent toujours être maintenues, elles n’ont pas la vitesse de décharge élevée que les batteries plus modernes.
-- **Lithium**: batteries légères, temps de décharge élevé avec une relativement bonne capacité. La tension finale obtenue par combinaison de plusieurs éléments sera un multiple 3.7 V. Les solutions possibles sont les suivantes: 
-  1. trois batteries de 3.7V, poids: 45g chacune; prix de chaque batterie: environn 20€ 
-  2. une batterie de 11.1V, poids: 150g, prix: 50 €
+##Types de batteries utilisables
+- **Alkaline** : piles non rechargeables, pas envissgeable pour l'utilisation avec Poppy.
+- **Nickel** :
+  * **NiCd** : (nickel-cadmium) technologie en voie de dsiparition à cause de l'*effet mémoire* lié.
+  * **NiMh** : (nickel-métal hydrure) *effet mémoire* très faible, technologie offrant un bon compromis (prix/capacité/poids), mais nécessite un temps de charge assez long.
+- **Plomb-acide** : ces batteries ont le défaut d'être volumineuses et lourdes, elles doivent toujours régulièrement chargées et ne permettent pas une vitesse de décharge aussi élevée que les autres technologies.
+- **Lithium-ion** : batteries légères, pas d'*effet mémoire*, temps de décharge élevé avec une relativement bonne capacité. La tension d'un élément est voisinne de 3.7 V. Les solutions possibles pour atteindres les 12 V nécessaire pour Poppy sont :
+ 
+  - trois batteries séparées de 3.7 V, banchées en série, poids: ~60g chacune; prix par batterie: ~ 20€. Permet de disposer les batteries séparémment dans la structure de Poppy <BR>
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/Batterie-lithium-ion_LG_RS.png" width="100" height="60" >] (http://147.210.74.152/Poppy/8_dessin_des_batteries/Batterie-lithium-ion_LG_RS.png)
+  - un *pack batterie de 11.1 V, poids: 150g, prix: environ 50 € <BR>
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/Pack-lithium-ion_LG_RS1.png" width="180" height="100" >] (http://147.210.74.152/Poppy/8_dessin_des_batteries/Pack-lithium-ion_LG_RS1.png)
 
 ##Emplacement:
-#Dans le cas d'une batterie unique
-la seule solution est de la fixer moteur 'abs_x' (id = 32). Le problème de cette solution est que la partie supérieure du robot est déjà assez lourde, ce qui va pénaliser la dynamique du robot. 
+###Cas d'une batterie unique lithium-ion de 11.1 V
+une solution possible est de fixer la betterie sur le robot au niveau du moteur `abs_x` (id = 32). Le problème de cette solution est que la partie supérieure de Poppy est déjà relativement lourde, ce qui peut pénaliser la dynamique du robot. 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.png" width="350" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.png)
