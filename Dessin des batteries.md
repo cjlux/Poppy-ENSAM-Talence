@@ -43,14 +43,12 @@ consommation sous 5V : 2A. On peut utiliser un convertisseur de tension 12 V->5 
 
 #Solution mise en œuvre
 
-- 3 Accumulateurs LG Lithium-Ion  en série avec les caractéristiques suivantes:
+3 Accumulateurs LG Lithium-Ion  en série avec les caractéristiques suivantes:
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.png" width="400" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.png)<BR>
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.png" width="350" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.png)
 
-Les images suivants montrent le câblage pour les batteries
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Des câbles avec connecteurs permettent de brancher au choix les batterie ou l'alimentation secteur :
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f12.png" width="700" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f12.png)
