@@ -3,10 +3,10 @@
 
 Après avoir branché l’alimentation, on peut vérifier que chaque moteur est détecté avec le code suivant:
 
-`cd Bureau/poppy/my_code`<BR>
-`python check_ports.py`<BR>
+    cd Bureau/poppy/my_code
+    python check_ports.py
 
-Le contenu du programme Python **check_ports.py** est :
+Le contenu du programme Python *check_ports.py* est :
 
     import pypot.dynamixel
     ports = pypot.dynamixel.get_available_ports()
@@ -32,7 +32,7 @@ L'affichage montre que tous les moteurs sont détectés. Ensuite, on doit créer
     cd poppytools/configuration
     python poppy_config_generation.py
 
-où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* dans le fichier **poppy_config_generation.py** :
+où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* dans le programme *poppy_config_generation.py* :
 
     poppy_config={}
     poppy_config['controllers'] = {}
@@ -56,7 +56,7 @@ Pour créer la configuration du robot (création d'un fichier .json avec la conf
     cd Bureau/poppy/my_code
     python create_poppy.py
 
-Contenu du fichier **create_poppy.py**
+Programme *create_poppy.py*
 
     import time
     import pypot.robot
@@ -64,12 +64,12 @@ Contenu du fichier **create_poppy.py**
     poppy = pypot.robot.from_config(poppy_config)
     poppy.start_sync()
 
-Le fichier **poppy_config.json** décrit pour chaque servomoteur : l’offset, le type, l’id et l’angle_limit. Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes. (Voir la figure suivant)
+Le fichier **poppy_config.json** décrit pour chaque servomoteur : l’offset, le type, l’id et l’angle_limit. 
+Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes  (Voir la figure suivante) :
 
-&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/7.png" align="bottom" width="500" height="450" >]
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/7.png" align="bottom" width="500" height="550" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cacbles/7.png)
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/2.png" width="200" height="450" >]
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/2.png" width="300" height="550" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/2.png)
 
 La première chose à faire est de vérifier que le configuration du robot avec les moteurs en position 0° donne un positionnement de Poppy comme montré sur cette photo :
@@ -83,7 +83,7 @@ On peut le faire avec le programme **starting_position.py** :
     cd Bureau/poppy/my_code
     python starting_position.py
 
-Contenu du fichier **starting_position.py** :
+Contenu du fichier *starting_position.py* :
 
     import time
     import pypot.robot 
@@ -111,9 +111,9 @@ Si le robbot ne se présente pas comme sur l'image, il faut changer la configura
 
 **N.B.** Il faut toujours définir la vitesse de déplacement, parce que la fonction **m.goto_position** établit une vitesse de la trajectoire qui peut être égal à 0. Dans ce cas, cette vitesse reste stocké dans la configuration du moteur et il ne bouge pas jusqu'à ce qu’on posera m.moving_speed différent de 0.
 
-## Code de présentation du robot
+## Programme simple de présentation du robot
 
-Le code suivant est utilisé pour une petit presentation du robot. Il employe les codes primitives dans poppy-software qui ont été mis au point par l’equipe Flower de l’Inria. Les primitives sont :
+Le programme suivant est utilisé pour une présentation simple du robot. Il employe les codes primitives dans poppy-software qui ont été mis au point par l’equipe Flower de l’Inria. Les primitives sont :
 - **MoveRecorder** qui permet d'enregistrer un mouvement du robot décidé par l’utilisateur,
 - **ArmsCopyMotion** qui permet de bouger les bras du robot en mode miroir.
 
@@ -121,55 +121,55 @@ Le code suivant est utilisé pour une petit presentation du robot. Il employe le
 `cd Bureau/poppy/my_code` <BR>
 `python presentation.py`<BR>
 
-“presentation.py”
+Contenu du programme *presentation.py*
 
-**main program** <BR>
-**starting presentation** <BR>
-*StartingPos() <BR>
-SittingPos() <BR>
-print 'sit down the robot and hold it from the handle pls' <BR>
-raw_input("press Enter if you are ready to continue..") <BR>
-print 'The presentation is starting..' <BR>
-ShakingLegs() <BR>
-time.sleep(0.5) <BR>
-Hands2tab() <BR>
-time.sleep(1) <BR>
-PlayHello()* <BR>
-**ask different options** <BR>
-*AskWhat2Do1() <BR>
-while True: <BR>
-&nbsp;&nbsp;&nbsp;AskKeyPress() <BR>
-&nbsp;&nbsp;&nbsp;if char == 'r': <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recording() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do2() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
-&nbsp;&nbsp;&nbsp;elif char == 'c': <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CopyArm() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do1() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
-&nbsp;&nbsp;&nbsp;elif char == 'p': <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Presentation() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do1() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
-&nbsp;&nbsp;&nbsp;elif char == 'm': <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayRecord() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskWhat2Do2() <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char = None <BR>
-else: break* <BR>
-**final position** <BR>
-*time.sleep(1) <BR>
-FinalPos() <BR>
-print 'going to finish...' <BR>
-raw_input("press Enter if you want to make the motors compliant..") <BR>
-MotorsCompl()* <BR>
+    # main program
+    # starting presentation
+    StartingPos()
+    SittingPos()
+    print 'sit down the robot and hold it from the handle pls'
+    raw_input("press Enter if you are ready to continue..") 
+    print 'The presentation is starting..'
+    ShakingLegs()
+    time.sleep(0.5)
+    Hands2tab()
+    time.sleep(1)
+    PlayHello()
+    # ask different options
+    AskWhat2Do1()
+    while True:
+        AskKeyPress() 
+        if char == 'r':
+            Recording() 
+            AskWhat2Do2() 
+            char = None 
+        elif char == 'c':
+            CopyArm()
+            AskWhat2Do1()
+            char = None
+        elif char == 'p':
+            Presentation()
+            AskWhat2Do1()
+            char = None
+        elif char == 'm':
+            PlayRecord()
+            AskWhat2Do2()
+           nbsp;char = None
+    else: break
+    # final position
+    time.sleep(1)
+    FinalPos()
+    print 'going to finish...'
+    raw_input("press Enter if you want to make the motors compliant..")
+    MotorsCompl()
 
 Les images suivantes montrent les trois modes possibles:
 
-[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff" align="bottom" width="800" height="290">]
-(http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.tiff) 
+[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.png" align="bottom" width="800" height="290">]
+(http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.png) 
 
-[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.tiff" align="bottom" width="790" height="200">]
-(http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.tiff)
+[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.png" align="bottom" width="790" height="200">]
+(http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.png)
 
 vidéo: <BR>
 
