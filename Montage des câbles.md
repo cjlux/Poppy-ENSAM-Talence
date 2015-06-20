@@ -5,7 +5,8 @@ On peut diviser le robot en deux parties pour le câblage : le haut (en rouge) e
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/6.png" align="bottom" width="620" height="680">]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/6.png)<BR>
 Chaque partie utilise :
-- un convertisseur *USB2AX*, qui convertit le bus USB en bus TTL 3 points (3P), permettant de dialoguer avec les servomoteurs Dynamixel de la série AX et MX [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/USB2AX_2.png"  align="center">] (http://147.210.74.152/Poppy/6_Montage_des_cables/USB2AX_2.png) 
+- un convertisseur *USB2AX Dynamixel*, qui convertit le bus USB en bus TTL 3 points (3P), permettant de dialoguer avec les servomoteurs Dynamixel de la série AX et MX <BR>
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/USB2AX_2.png"  width="120" height="80"  align="center">] (http://147.210.74.152/Poppy/6_Montage_des_cables/USB2AX_2.png) 
 - une platine *Bioloid 3P Extension Board*, qui permet le raccordement 3P de 6 servomoteurs sur la platine 
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png" align="center">] (http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png)   
 - un circuit *SMPS2 Dynamixel*, pour l'alimentation 12 V pour des servomoteurs grâce à 4 connecteurs :
@@ -13,25 +14,28 @@ Chaque partie utilise :
   - 2 connecteurs 4P, pour le branchement de servomoteurs Dynamixel série DX ou RX.[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png"  align="center">]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png) 
 
-Les servomoteurs dynamixel sont *chaînés* les uns autres par un bus numérique qui les relie entre eux.
+Les servomoteurs dynamixel sont *chaînés* les uns autres par un bus numérique qui les relie entre eux. Dans une chaîne ainsi formée, un seul des servomteurs est relié à un *Bioloid 3P Extension Board* ou à un *SMPS2 Dynamixel*.
 
 ## HAUT DU CORPS
-Le *Bioloid 3P* du haut du corps est connecté au *SMPS2 Dynamixel* et aux moteurs :
+Le *Bioloid 3P* du haut du corps est connecté au *SMPS2 Dynamixel* et aux 5 servomoteurs :
 - `head_y (id=37)`
 - `head_z (id=36)` 
 - `r_shoulder_y (id=51)` 
 - `l_shoulder_y (id=41)` 
 - `bust_x (id=35)`.
 
-Enfin, le *SMPS2 Dynamixel* est relié au *HUB USB 4 PORTS* situé dans la tête. le moteur “head_y (id=37)”.
+Le servomoteur `head_y (id=37)` est également connecté au *USB2AX* qui permet la liason avec le *HUB USB 4 PORTS* situé dans la tête.
 
 ## BAS DU CORPS
-Le *Bioloid 3P* du bas du corps est connecté au *SMPS2 Dynamixel* et aux moteurs :
+Les servomoteurs des 2 jambes sont chaînés depuis la cheville jusqu'uax servomoteurs de la hanche, `r_hip_x (id=11)` et `l_hip_x (id=21)`.
+
+Le *Bioloid 3P* du bas du corps est connecté au *SMPS2 Dynamixel* et aux 2 servomoteurs :
 - `r_hip_x (id=11)`
 - `l_hip_x (id=21)`. 
-La partie inférieure du robot est attachée à l'USB HUB 4 PORTS par le *SMPS2 Dynamixel*.
 
-Pour connecter les moteurs `r_hip_y (id=23)`, `r_knee_y (id=24)`, `l_hip_y (id=13)` et `l_knee_y (id=14)`, on a besoin d’un câble 3P d'environ 20cm de long, et pour la connexion du *USB HUB 4 PORTS* au *SMPS2 Dynamixel* d’un câble 3P d'environ 60cm. Ces câbles sont obtenus en soudant ensemble plusieur câbles 3P pour obtenir les longueurs voulues.
+Le *SMPS2 Dynamixel* du bas du corsp est connecté au *USB2AX* relié au *USB HUB 4 PORTS* de la tête. Il faut réaliser un câble 3P d'environ 60cm (souder bout à bout plusieurs câbles 3P pour obtenir la longueur voulue).
+
+Pour connecter les moteurs `r_hip_y (id=23)`, `r_knee_y (id=24)`, `l_hip_y (id=13)` et `l_knee_y (id=14)` au  *Bioloid 3P*, on a besoin d’un câble 3P d'environ 20cm de long (souder bout à bout plusieurs câbles 3P pour obtenir la longueur voulue).
 
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/1.png" align="bottom" width="214" height="244" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/1.png)
