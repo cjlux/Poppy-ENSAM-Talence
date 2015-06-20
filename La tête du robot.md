@@ -1,7 +1,7 @@
 #Description de la tête
 
-[<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f13.tiff" width="700" height="250" >]
-(http://147.210.74.152/Poppy/9_la_tete_du_robot/f13.tiff)
+[<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f13.png" width="700" height="250" >]
+(http://147.210.74.152/Poppy/9_la_tete_du_robot/f13.png)
 
 La tête de la version v1.0 de Poppy Humanoid a été conçu pour tenir:
 - carte Odroid U3 <BR>
@@ -16,9 +16,8 @@ modifications:
 - l'écran a été remplacé par une pièce en plastique <BR>
 - un petit trou a été ajouté pour la sortie des câbles à l'arrière de la tête <BR>
 
-##CARTE ODROID U3
+# La carte ODROID U3
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f14.png" width="250" height="250" >]
 (http://147.210.74.152/Poppy/9_la_tete_du_robot/f14.png)
 
@@ -34,7 +33,7 @@ Caractéristiques:
 - Package includes the main board and the heat sink <BR>
 
 [<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.png" width="500" height="250" >]
-(http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.tiff)
+(http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.png)
 
 ##La caméra
 
