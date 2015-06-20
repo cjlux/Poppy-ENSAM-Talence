@@ -1,6 +1,6 @@
-##ALGORITHME ‘FACE RECOGNITION’
+##ALGORITHME DE RECONNAISSANCE DE VISAGE
 
-Le code suivant est utilisé pour ajouter un algorithme de face recognition à la presentation du robot.<BR>
+Le code suivant est utilisé pour ajouter un algorithme de reconnaissance de visage à la presentation du robot..<BR>
 Pour l’utilisation il faut avoir:
 
 &nbsp;&nbsp;&nbsp; - OpenCV installé <BR>
@@ -59,15 +59,15 @@ sudo apt-get install python-opencv <BR>
 		pass <BR>
 		
 Le détecteur d'objet décrit a été initialement proposée par Paul Viola et développé par Rainer Lienhart.
-Tout d’abord, un classificateur est formé avec quelques image d’example d'un objet particulier (dans ce cas un visage) appelés exemples positifs qui ont tous la même taille (par exemple, 30x30), et des exemples négatifs qui sont images arbitraires de la même taille.
+Tout d’abord, un classificateur est formé avec quelques images d’example d'un objet particulier (dans ce cas un visage) appelés exemples positifs qui ont tous la même taille (par exemple, 30x30), et des exemples négatifs qui sont images arbitraires de la même taille.
 Après que le classificateur est formé, il peut être appliqué à une région d’intérêt.
 Le classificateur est conçu de sorte qu'il peut être facilement redimensionné afin de trouver les objets d’intérêt des tailles différentes, ce qui est plus efficace que le redimensionnement de l'image elle-même.
-Le mot “cascade" signifie que le classificateur se compose de plusieurs classificateurs similaires (étapes) qui sont appliqués à une région d'intérêt jusqu'à le candidat est rejeté ou toutes les étapes sont transmis. Les classificateurs de base sont classificateurs ‘decision-tree’ avec au moins 2 feuilles.
+Le mot “cascade" signifie que le classificateur se compose de plusieurs classificateurs similaires (étapes) qui sont appliqués à une région d'intérêt jusqu'à que le candidat est rejeté ou toutes les étapes sont croisées. Les classificateurs de base sont classificateurs ‘decision-tree’ avec au moins 2 branches.
 
 **Paramètres**
 
 &nbsp;&nbsp;&nbsp; - scaleFactor: le modèle a une taille fixe définie au cours de la formation, qui est visible dans le<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“/haarcascades/haarcascade_frontalface_alt2.xml”. Ça signifie que cette taille de visage <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;est détecté dans l'image d’origine mais on peut redimensionner une grande face à <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uneplus petite qui est détectable pour l'algorithme. <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1 est une bonne valeur possible parce que vous augmentez les chances d'une taille <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;correspondant au modèle de détection est trouvé.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1 est une bonne valeur possible parce que vous augmentez les chances de <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trouver une image de taille correspondant au modèle de détection.
 
 &nbsp;&nbsp;&nbsp; -  minNeighbors: Ce paramètre aura une incidence sur la qualité des visages détectés. <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avec une valeur haute on a moins détections mais avec une qualité supérieure.
