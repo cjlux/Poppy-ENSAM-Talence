@@ -51,9 +51,9 @@ La paquet Python *Pypot* fournit entre autre le programme *herborist* qui permet
 
 Pour tester l'installation vous pouvez taper : `python -c "import pypot"` qui ne devrait pas retourner d'erreur !  
 L'utilisation d'*Herborist* nécessite des *accès en écriture* sur les ports USB (on parle aussi de *port série*) : pour avoir ces accès, l'utilisateur doit faire partie du groupe *dialout*.  
-Pour vérifier si vous faites partie du groupe dialout, taper la commande `id` : 
-  - si dialout est dans la liste, vous faites partie de ce groupe et vous bénéficiez automatiquement des accès en lecture/écriture au port série.
-  - Sinon, il faut ajouter votre login au groupe dialout en tapant la commande `sudo adduser yourlogin dialout`. Sur la plupart des systèmes GNU/Linux, les attibuts de session (liste des groupes par exemple...) sont fixés à l'ouverture de la session : pour activer les changements fermez puis ouvrez à nouveau votre session utilisateur. Taper à nouveau`id` : cette fois le groupe dialout doit apparaître.
+Pour vérifier si vous faites partie du groupe *dialout*, taper la commande `id` : 
+  - si *dialout* est dans la liste, vous faites partie de ce groupe et vous bénéficiez automatiquement des accès en lecture/écriture au port série.
+  - Sinon, il faut ajouter votre login au groupe *dialout* en tapant la commande `sudo adduser yourlogin dialout`. Sur la plupart des systèmes GNU/Linux, les attibuts de session (liste des groupes par exemple...) sont fixés à l'ouverture de la session : pour activer les changements fermez puis ouvrez à nouveau votre session utilisateur. Taper à nouveau`id` : cette fois le groupe *dialout* doit apparaître.
 
 
 ### _Windows_  
