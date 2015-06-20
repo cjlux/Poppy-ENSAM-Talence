@@ -65,11 +65,11 @@ Programme *create_poppy.py*
     poppy.start_sync()
 
 Le fichier **poppy_config.json** décrit pour chaque servomoteur : l’offset, le type, l’id et l’angle_limit. 
-Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes  (Voir la figure suivante) :
+Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes  (la figure de droite montre la configuration ENSAM) :
 
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/7.png" align="bottom" width="500" height="550" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cacbles/7.png)
-[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/2.png" width="300" height="550" >]
+[<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/2.png" width="350" height="550" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/2.png)
 
 La première chose à faire est de vérifier que le configuration du robot avec les moteurs en position 0° donne un positionnement de Poppy comme montré sur cette photo :
@@ -78,7 +78,7 @@ La première chose à faire est de vérifier que le configuration du robot avec 
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/5.jpg" align="bottom" width="250" height="450">]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/5.jpg)  
 
-On peut le faire avec le programme **starting_position.py** :
+On peut le faire avec le programme *starting_position.py* :
 
     cd Bureau/poppy/my_code
     python starting_position.py
@@ -165,14 +165,14 @@ Contenu du programme *presentation.py*
 
 Les images suivantes montrent les trois modes possibles:
 
-[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.png" align="bottom" width="800" height="290">]
-(http://147.210.74.152/Poppy/7_demerrage_du_robot/f7.png) 
+[<img src="http://147.210.74.152/Poppy/7_demarrage_du_robot/f7.png" align="bottom" width="800" height="290">]
+(http://147.210.74.152/Poppy/7_demarrage_du_robot/f7.png) 
 
-[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.png" align="bottom" width="790" height="200">]
-(http://147.210.74.152/Poppy/7_demerrage_du_robot/f7text.png)
+[<img src="http://147.210.74.152/Poppy/7_demarrage_du_robot/f7text.png" align="bottom" width="790" height="200">]
+(http://147.210.74.152/Poppy/7_demarrage_du_robot/f7text.png)
 
-vidéo: <BR>
+vidéo:
 
-[<img src="http://147.210.74.152/Poppy/7_demerrage_du_robot/pres.png" align="center" width="180">.mp4]
-(http://147.210.74.152/Poppy/7_demerrage_du_robot/Presentation.mp4)
+[<img src="http://147.210.74.152/Poppy/7_demarrage_du_robot/pres.png" align="center" width="180">.mp4]
+(http://147.210.74.152/Poppy/7_demarrage_du_robot/Presentation.mp4)
 
