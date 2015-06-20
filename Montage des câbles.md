@@ -1,13 +1,12 @@
 # Câblage des servomoteurs
 ---
 
-On peut diviser le robot en deux parties pour la description du câblage : le haut (en rouge) et le bas (en vert). 
+On peut diviser le robot en deux parties pour le câblage : le haut (en rouge) et le bas (en vert). 
 [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/6.png" align="bottom" width="620" height="680">]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/6.png)<BR>
 Chaque partie utilise :
-- un "Bioloid 3P Extension Board" (multiprise pour les connecteurs 3 pins (3P)) [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png" align="center">]
-(http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png)   
-- un "SMPS2 Dynamixel" (alimentation 12 V pour les servomoteurs) [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png"  align="center">]
+- une platine *Bioloid 3P Extension Board* (multiprise pour les connecteurs 3 pins (3P)), qui permet le roccordement des servomoteurs sur la platine [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png" align="center">] (http://147.210.74.152/Poppy/6_Montage_des_cables/Bioloid3P.png)   
+- un circuit *SMPS2 Dynamixel*, pour l'alimentation 12 V pour des servomoteurs [<img src="http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png"  align="center">]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/SMP2P_Dynamixel.png) 
 
 
