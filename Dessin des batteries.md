@@ -37,19 +37,16 @@ permet de disposer une batterie dans chaque jambe (entre la hanche et le genou) 
 Ces solutions entraînnent une augmentation de masse d'environ 60g pour chaque jambe, qui ne devrait pas poser de problème.
 
 ##Consommation de la carte Odroid U3
-consommation sous 5V : 2A. On peut utiliser un convertisseur de tension 12 V->5 V pour alimenter la acrte Odroid avec la tension de 12 V disponible dans Poppy (par exemple *UBEC DC/DC Step-Down (Buck) Converter*).
+consommation sous 5V : 2A. On peut utiliser un convertisseur de tension 12 V->5 V pour alimenter la carte Odroid avec la tension de 12 V disponible dans Poppy (par exemple *UBEC DC/DC Step-Down (Buck) Converter*):
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/UBEC-DC-Converter.png" width="190" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/UBEC-DC-Converter.png.png)
 
 #Solution mise en œuvre
 
 - 3 Accumulateurs LG Lithium-Ion  en série avec les caractéristiques suivantes:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.png" width="400" height="80" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/tab_bat.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.png" width="350" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f11.png)
 
