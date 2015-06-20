@@ -28,35 +28,18 @@ Théoriquement, avec des batteries permettant d'obtenir une capacité de 2600 mA
 ##Emplacement:
 ###Pack batterie unique lithium-ion de 11.1 V
 une solution possible est de fixer la batterie sur le robot au niveau du moteur `abs_x` (id = 32). Le problème de cette solution est que la partie supérieure de Poppy est déjà relativement lourde, ce qui peut pénaliser la dynamique du robot. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.png" width="350" height="160" >]
 (http://147.210.74.152/Poppy/8_dessin_des_batteries/f8.png)
 
 ###Solution avec trois batteries lithium-ion
 permet de disposer une batterie dans chaque jambe (entre la hanche et le genou) et de fixer la troisième batterie au niveau des moteurs `r_hip_x` (id = 11) et `l_hip_x` (id = 21). Une limitation de cette solution pourrait être le couple maximal des moteurs `r_hip_y` (id = 23) et `l_hip_y` (id = 13) (dans sa version initiale, la dynamique de la jambe de Poppy sollicite environ 21% du couple maximal des moteurs 13 et 23). 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.png" width="350" height="160" >]
-(http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.png)
-
 Ces solutions entraînnent une augmentation de masse d'environ 60g pour chaque jambe, qui ne devrait pas poser de problème.
 
 ##Consommation de la carte Odroid U3
-- consommation sous 5V : 2A. On peut utiliser un convertisseur de ension 12 V->5 V pour alimenter la acrte Odroid avec la tension de 12 V disponible dans Poppy.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.png" width="350" height="140" >]
-(http://147.210.74.152/Poppy/8_dessin_des_batteries/f9.png)
-
-**Consommation d’énergie par Odroid U3:**<BR>
-
-&nbsp;&nbsp;&nbsp; - puissance: 5V / 2A 
-
-Il faut utiliser un transformateur de tension 5V-12V comme celui de l’image suivant.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.png" width="190" height="80" >]
-(http://147.210.74.152/Poppy/8_dessin_des_batteries/f10.png)
+consommation sous 5V : 2A. On peut utiliser un convertisseur de tension 12 V->5 V pour alimenter la acrte Odroid avec la tension de 12 V disponible dans Poppy (par exemple *UBEC DC/DC Step-Down (Buck) Converter*).
+[<img src="http://147.210.74.152/Poppy/8_dessin_des_batteries/UBEC-DC-Converter.png" width="190" height="80" >]
+(http://147.210.74.152/Poppy/8_dessin_des_batteries/UBEC-DC-Converter.png.png)
 
 #Solution mise en œuvre
 
