@@ -1,18 +1,17 @@
-#Description de la tête
+#Description de la tête 1.0
 
 [<img src="http://147.210.74.152/Poppy/8_Evolution_tete/f13.png" width="700" height="250" >]
 (http://147.210.74.152/Poppy/8_Evolution_tete/f13.png)
 
-La tête de la version v1.0 de Poppy Humanoid a été conçu pour tenir:
-- carte Odroid U3
-- moteur MX-28 
-- camera JDEPC-OV05 
-- USB HUB 4 ports
-- EDIMAX Wireless 802.11b/g/n 
-- J14 VISATON haut-parleur K 20.40
-- Stereo Amplifier MAX 98306 
+La tête de la version v1.0 de Poppy Humanoid a été conçue pour contenir:
+- une carte Odroid U3
+- un moteur MX-28 
+- une camera JDEPC-OV05 
+- le HEB USB 4 ports
+- un jeu de haut-parleurs *J14 VISATON haut-parleur K 20.40*
+- un amplificateur stéréo *MAX 98306* 
 
-modifications pour la version ENSAM juin 2015 :
+Pour la version ENSAM montée en juin 2015, les modifications suivantes ont été faites :
 - l'écran a été remplacé par une pièce en plastique 
 - un petit trou a été ajouté pour la sortie des câbles à l'arrière de la tête.
 
@@ -22,15 +21,15 @@ modifications pour la version ENSAM juin 2015 :
 (http://147.210.74.152/Poppy/8_Evolution_tete/f14.png)
 
 Caractéristiques:
-- The Powerful Linux Computer
+- compatible LGNU/Linux
 - 1.7GHz Quad-Core processor and 2GByte RAM 
 - 10/100Mbps Ethernet with RJ-45 LAN Jack 
 - 3 x High speed USB2.0 Host ports 
 - Audio codec with headphone jack on board
 - GPIO/UART/I2C ports
-- XUbuntu 13.10 or Android 4.x  Operating System 
-- Taille : 83 x 48 mm, Poids : 48g including heat sink 
-- Package includes the main board and the heat sink 
+- pilotable sous XUbuntu ou Android 4.x
+- Taille : 83 x 48 mm, Poids : 48g (avec le radiateur/ventilateur).
+- carte mère et radiateur/ventilateur sont livrés dans la boîte.
 
 [<img src="http://147.210.74.152/Poppy/8_Evolution_tete/f15.png" width="500" height="250" >]
 (http://147.210.74.152/Poppy/8_Evolution_tete/f15.png)
