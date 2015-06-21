@@ -3,8 +3,8 @@
 
 Après avoir branché l’alimentation, on peut vérifier que chaque moteur est détecté en tapant dans le shell Linux les commandes :
 
-    cd path_to_check_ports.py
-    python check_ports.py
+    cd path_to_check_ports.py    # se positionner dans le répertoire qui contient check_ports.py
+    python check_ports.py        # exécuter check_ports.py avec python.
 
 Le contenu du programme Python *check_ports.py* est :
 
@@ -19,7 +19,7 @@ Le contenu du programme Python *check_ports.py* est :
     dxl_io2 = pypot.dynamixel.DxlIO(ports[1],baudrate=1000000,use_sync_read=False) #lower body
     print dxl_io2.scan(range(60))
 
-le résultat devrait ressembler à (noter les numéros des servomoteurs) :
+le résultat devrait ressembler à :
 
     /dev/ttyACM1
     [11, 12, 13, 14, 15, 21, 22, 23, 24, 25]
@@ -30,11 +30,11 @@ L'affichage montre que tous les moteurs sont détectés sur les 2 ports USB.
 
 Ensuite, on doit créer le fichier de configuration de Poppy avec :
 
-    cd path/to/poppy-software
-    cd poppytools/configuration
-    python poppy_config_generation.py
+    cd path/to/poppy-software           # se positionner dans le répertoire 'poppy-software'
+    cd poppytools/configuration         # aller dans le sous-répertoire 'poppytools/configuration'
+    python poppy_config_generation.py   # exécuter 'poppy_config_generation.py' avec Python
 
-où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* (ou ceux de votre ordinateur) dans le programme *poppy_config_generation.py* :
+où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* (ou ceux de votre ordinateur) dans le fichier *poppy_config_generation.py* :
 
     poppy_config={}
     poppy_config['controllers'] = {}
@@ -55,7 +55,7 @@ où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* (ou ceux de votr
 
 Pour créer la configuration du robot (création d'un fichier .json avec la configuration du robot) :
 
-    cd path_to/my_code
+    cd path_to_create_poppy.py
     python create_poppy.py
 
 Programme *create_poppy.py*
@@ -66,11 +66,11 @@ Programme *create_poppy.py*
     poppy = pypot.robot.from_config(poppy_config)
     poppy.start_sync()
 
-Le fichier **poppy_config.json** décrit pour chaque servomoteur : l’offset, le type, l’id et l’angle_limit. 
+Le fichier **poppy_config.json** décrit pour chaque servomoteur : l’offset, le type, l’id et l’angle_limit. <BR>
 Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes  (la figure de droite montre la configuration ENSAM) :
 
-[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/7.png" align="bottom" width="500" height="550" >]
-(http://147.210.74.152/Poppy/6_Montage_des_cacbles/7.png)
+[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/MoteursPoppy.png" align="bottom" width="500" height="550" >]
+(http://147.210.74.152/Poppy/6_Montage_des_cacbles/MoteursPoppy.png)
 [<img src="http://147.210.74.152/Poppy/6_premier_demarrage/2.png" width="350" height="550" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/2.png)
 
