@@ -60,6 +60,6 @@
 [<img src="http://147.210.74.152/Poppy/Videos/jambe_sur_bassin.png" align="center" width="180">.ogv]
 (http://147.210.74.152/Poppy/Videos/jambe_sur_bassin.ogv)
 
+[ :arrow_left: Montage, paramétrage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage,%20paramétrage%20des%20servomoteurs.md)
 [ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
-[ :arrow_left: Cablage des servo-moteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Cablage%20des%20servomoteurs.md)
 [ :arrow_right: Cablage des servo-moteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Cablage%20des%20servomoteurs.md)
