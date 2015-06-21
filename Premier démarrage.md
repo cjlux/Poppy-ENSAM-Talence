@@ -1,9 +1,9 @@
 # Premier démarrage de Poppy
 (pilotage avec un portable Linux)
 
-Après avoir branché l’alimentation, on peut vérifier que chaque moteur est détecté avec le code suivant:
+Après avoir branché l’alimentation, on peut vérifier que chaque moteur est détecté en tapant dans le shell Linux les commandes :
 
-    cd Bureau/poppy/my_code
+    cd path_to_check_ports.py
     python check_ports.py
 
 Le contenu du programme Python *check_ports.py* est :
@@ -19,20 +19,22 @@ Le contenu du programme Python *check_ports.py* est :
     dxl_io2 = pypot.dynamixel.DxlIO(ports[1],baudrate=1000000,use_sync_read=False) #lower body
     print dxl_io2.scan(range(60))
 
-le résultat devrait être:
+le résultat devrait ressembler à (noter les numéros des servomoteurs) :
 
     /dev/ttyACM1
     [11, 12, 13, 14, 15, 21, 22, 23, 24, 25]
     /dev/ttyACM0
     [31, 32, 33, 34, 35, 36, 37, 41, 42, 43, 44, 45, 51, 52, 53, 54]
 
-L'affichage montre que tous les moteurs sont détectés. Ensuite, on doit créer le fichier de configuration de Poppy avec :
+L'affichage montre que tous les moteurs sont détectés sur les 2 ports USB. 
+
+Ensuite, on doit créer le fichier de configuration de Poppy avec :
 
     cd path/to/poppy-software
     cd poppytools/configuration
     python poppy_config_generation.py
 
-où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* dans le programme *poppy_config_generation.py* :
+où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* (ou ceux de votre ordinateur) dans le programme *poppy_config_generation.py* :
 
     poppy_config={}
     poppy_config['controllers'] = {}
@@ -53,7 +55,7 @@ où il faut définir les ports */dev/ttyACM1* et */dev/ttyACM0* dans le programm
 
 Pour créer la configuration du robot (création d'un fichier .json avec la configuration du robot) :
 
-    cd Bureau/poppy/my_code
+    cd path_to/my_code
     python create_poppy.py
 
 Programme *create_poppy.py*
@@ -80,7 +82,7 @@ La première chose à faire est de vérifier que le configuration du robot avec 
 
 On peut le faire avec le programme *starting_position.py* :
 
-    cd Bureau/poppy/my_code
+    cd path_to_starting_position.py
     python starting_position.py
 
 Contenu du fichier *starting_position.py* :
@@ -117,11 +119,10 @@ Le programme suivant est utilisé pour une présentation simple du robot. Il emp
 - **MoveRecorder** qui permet d'enregistrer un mouvement du robot décidé par l’utilisateur,
 - **ArmsCopyMotion** qui permet de bouger les bras du robot en mode miroir.
 
+    cd path_to_presentation.py
+    python presentation.py
 
-`cd Bureau/poppy/my_code` <BR>
-`python presentation.py`<BR>
-
-Contenu du programme *presentation.py*
+Contenu du programme *presentation.py* :
 
     # main program
     # starting presentation
