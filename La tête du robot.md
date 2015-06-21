@@ -1,7 +1,7 @@
 #Description de la tête
 
-[<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f13.png" width="700" height="250" >]
-(http://147.210.74.152/Poppy/9_la_tete_du_robot/f13.png)
+[<img src="http://147.210.74.152/Poppy/9_Evolution_tete/f13.png" width="700" height="250" >]
+(http://147.210.74.152/Poppy/9_Evolution_tete/f13.png)
 
 La tête de la version v1.0 de Poppy Humanoid a été conçu pour tenir:
 - carte Odroid U3
@@ -18,8 +18,8 @@ modifications pour la version ENSAM juin 2015 :
 
 # La carte ODROID U3
 
-[<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f14.png" width="250" height="250" >]
-(http://147.210.74.152/Poppy/9_la_tete_du_robot/f14.png)
+[<img src="http://147.210.74.152/Poppy/9_Evolution_tete/f14.png" width="250" height="250" >]
+(http://147.210.74.152/Poppy/9_Evolution_tete/f14.png)
 
 Caractéristiques:
 - The Powerful Linux Computer
@@ -32,8 +32,8 @@ Caractéristiques:
 - Taille : 83 x 48 mm, Poids : 48g including heat sink 
 - Package includes the main board and the heat sink 
 
-[<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.png" width="500" height="250" >]
-(http://147.210.74.152/Poppy/9_la_tete_du_robot/f15.png)
+[<img src="http://147.210.74.152/Poppy/9_Evolution_tete/f15.png" width="500" height="250" >]
+(http://147.210.74.152/Poppy/9_Evolution_tete/f15.png)
 
 ##La caméra
 
@@ -53,5 +53,5 @@ Caractéristiques:
 - haute fiabilité 
 - taille: 60 * 8.0 * 6.6 mm.
 
-[<img src="http://147.210.74.152/Poppy/9_la_tete_du_robot/f16.png" width="350" height="250" >]
-(http://147.210.74.152/Poppy/9_la_tete_du_robot/f16.png)
+[<img src="http://147.210.74.152/Poppy/9_Evolution_tete/f16.png" width="350" height="250" >]
+(http://147.210.74.152/Poppy/9_Evolution_tete/f16.png)
