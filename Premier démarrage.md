@@ -69,7 +69,7 @@ Programme *create_poppy.py*
 Le fichier **poppy_config.json** décrit pour chaque servomoteur : l’offset, le type, l’id et l’angle_limit. <BR>
 Il faut vérifier qu'on utilise la bonne configuration des moteurs quand on travail avec différents programmes  (la figure de droite montre la configuration ENSAM) :
 
-[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/MoteursPoppy.png" align="bottom" width="500" height="550" >]
+[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/MoteursPoppy.png" align="bottom" width="400" height="550" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cacbles/MoteursPoppy.png)
 [<img src="http://147.210.74.152/Poppy/6_premier_demarrage/2.png" width="350" height="550" >]
 (http://147.210.74.152/Poppy/6_Montage_des_cables/2.png)
@@ -119,8 +119,8 @@ Le programme suivant est utilisé pour une présentation simple du robot. Il emp
 - **MoveRecorder** qui permet d'enregistrer un mouvement du robot décidé par l’utilisateur,
 - **ArmsCopyMotion** qui permet de bouger les bras du robot en mode miroir.
 
-    cd path_to_presentation.py
-    python presentation.py
+    `cd path_to_presentation.py`<BR>
+    `python presentation.py`
 
 Contenu du programme *presentation.py* :
 
