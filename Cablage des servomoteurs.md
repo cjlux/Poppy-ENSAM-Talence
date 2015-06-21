@@ -46,7 +46,7 @@ Pour connecter les moteurs `r_hip_y (id=23)` et `r_knee_y (id=24)` (ainsi que `l
 [<img src="http://147.210.74.152/Poppy/5_Cablage/4.jpg" width="240" height="244" >]
 (http://147.210.74.152/Poppy/5_Cablages/4.jpg)
 
-[ :arrow_left: Cablage des servo-moteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Cablage%20des%20servomoteurs.md)
+[ :arrow_left: Montage, assemblage global] https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%20et%20assemblage%20global.md
 [ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
 [ :arrow_right: Premier démarrage] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Premier%20d%C3%A9marrage.md)
 
