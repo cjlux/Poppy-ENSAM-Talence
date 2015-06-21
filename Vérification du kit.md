@@ -31,21 +31,21 @@ Assurez-vous de posséder tous les éléments contenus dans les emballages indiv
 (http://147.210.74.152/Poppy/1_Verification_kit/connectique_globale_ld.jpg)
 
 Cet ensemble se divise en trois sous-ensembles :  
-## 1. la connectique USB  
+## 1. La connectique USB  
 [<imd src="http://147.210.74.152/Poppy/1_Verification_kit/connectique_usb_ld.jpg" width="562" height="453">]
 (http://147.210.74.152/Poppy/1_Verification_kit/connectique_usb_ld.jpg)  
 Nota : La carte Sparkfun FTDI Basic Breakout – 3.3V est un adaptateur USB-3P (câble 3 points).
 
-## 2.la connectique 3P permettant d'alimenter le servomoteur  
+## 2. La connectique 3P permettant de connecter les servomoteurs  
 [<img src="http://147.210.74.152/Poppy/1_Verification_kit/pieces_alim_ld.jpg" width="562" height="453">]
 (http://147.210.74.152/Poppy/1_Verification_kit/pieces_alim_ld.jpg)
 
-## 3. la centrale inertielle 9 DOF  
+## 3. La centrale inertielle 9 DOF  
 [<img src="http://147.210.74.152/Poppy/1_Verification_kit/carte_centrale_ld.jpg" width="151" height="196">]
 (http://147.210.74.152/Poppy/1_Verification_kit/carte_centrale_ld.jpg)   
 gyroscope 3 axes, accéléromètre 3 axes, magnétomètre 3 axes    
 
-# **Le câblage**
+# **Les câbles**
 [<img src="http://147.210.74.152/Poppy/1_Verification_kit/cables_ld.jpg" width="538" height="520">]
 (http://147.210.74.152/Poppy/1_Verification_kit/cables_ld.jpg)   
 Attention : les câbles possèdent des détrompeurs utiles lors du montage  
