@@ -164,7 +164,7 @@ Contenu du programme *presentation.py* :
     raw_input("press Enter if you want to make the motors compliant..")
     MotorsCompl()
 
-Les images suivantes montrent les trois modes possibles:
+Les images suivantes montrent les trois modes possibles :
 
 [<img src="http://147.210.74.152/Poppy/6_premier_demarrage/f7.png" align="bottom" width="800" height="290">]
 (http://147.210.74.152/Poppy/6_premier_demarrage/f7.png) 
