@@ -174,9 +174,9 @@ Les images suivantes montrent les trois modes possibles :
 
 vidéo:
 
-[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/pres.png" align="center" width="180">.mp4]
+[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/pres.png" align="center" width="280">.mp4]
 (http://147.210.74.152/Poppy/6_premier_demarrage/Presentation.mp4)
-[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/pres.png" align="center" width="180">.ogv]
+[<img src="http://147.210.74.152/Poppy/6_premier_demarrage/pres.png" align="center" width="280">.ogv]
 (http://147.210.74.152/Poppy/6_premier_demarrage/Presentation.ogv)
 
 [ :arrow_left: Montage, Câblage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Cablage%20des%20servomoteurs.md)
