@@ -2,8 +2,8 @@
 ---
 
 On peut diviser le robot en deux parties pour le câblage : le haut (en rouge) et le bas (en vert). 
-[<img src="http://147.210.74.152/Poppy/5_Cablage/6.png" align="bottom" width="620" height="680">]
-(http://147.210.74.152/Poppy/5_Cablage/6.png)<BR>
+[<img src="http://147.210.74.152/Poppy/5_Cablage/CablageMoteurs.png" align="bottom" width="680" height="680">]
+(http://147.210.74.152/Poppy/5_Cablage/CablageMoteur.png)<BR>
 Chaque partie utilise :
 - un convertisseur *USB2AX Dynamixel*, qui convertit le bus USB en bus TTL 3 points (3P), permettant de dialoguer avec les servomoteurs Dynamixel de la série AX et MX <BR>
 [<img src="http://147.210.74.152/Poppy/5_Cablage/USB2AX_2.png"  width="120" height="80"  align="center">] (http://147.210.74.152/Poppy/5_Cablage/USB2AX_2.png) 
@@ -12,7 +12,7 @@ Chaque partie utilise :
 - un circuit *SMPS2 Dynamixel*, pour l'alimentation 12 V pour des servomoteurs grâce à 4 connecteurs :
   - 2 connecteurs 3P, pour le branchement de servomoteurs Dynamixel série AX,
   - 2 connecteurs 4P, pour le branchement de servomoteurs Dynamixel série DX ou RX.[<img src="http://147.210.74.152/Poppy/5_cablage/SMP2P_Dynamixel.png"  align="center">]
-(http://147.210.74.152/Poppy/5_cablage/SMP2P_Dynamixel.png) 
+(http://147.210.74.152/Poppy/5_Cablage/SMP2P_Dynamixel.png) 
 
 Les servomoteurs dynamixel sont *chaînés* les uns autres par un bus numérique qui les relie entre eux. Dans une chaîne ainsi formée, un seul des servomteurs est relié à un *Bioloid 3P Extension Board* ou à un *SMPS2 Dynamixel*.
 
