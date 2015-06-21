@@ -77,4 +77,4 @@ Tous les accessoires sont facultatifs.
 (http://147.210.74.152/Poppy/1_Verification_kit/tampons.jpg)
 
 [ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
-[ :arrow_right: Montage, paramétrage des servo-moteurs ] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%2C%20param%C3%A9trage%20des%20servo-moteurs.md)
+[ :arrow_right: Montage, paramétrage des servo-moteurs ] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%2C%20param%C3%A9trage%20des%20servomoteurs.md)
