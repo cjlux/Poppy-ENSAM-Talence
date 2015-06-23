@@ -1,4 +1,3 @@
-
 [ :arrow_left: Montage, Câblage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Cablage%20des%20servomoteurs.md)
 [ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
 [ :arrow_right: Solutions batterie] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Solution%20batteries.md)
