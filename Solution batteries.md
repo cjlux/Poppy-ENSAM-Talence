@@ -1,3 +1,6 @@
+[ :arrow_left: Montage, Câblage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Premier%20d%C3%A9marrage.md)
+[ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
+
 # Étude d'une solution batterie pour Poppy
 
 ###Consommation des servomoteurs de Poppy
@@ -53,3 +56,5 @@ Des câbles avec connecteurs permettent de brancher au choix les batterie ou l'a
 [<img src="http://147.210.74.152/Poppy/9_Solution_batteries/f12.png" width="700" height="160" >]
 (http://147.210.74.152/Poppy/9_Solution_batteries/f12.png)
 
+[ :arrow_left: Montage, Câblage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Premier%20d%C3%A9marrage.md)
+[ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
