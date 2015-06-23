@@ -6,8 +6,8 @@
 ###Consommation des servomoteurs de Poppy
 * plage de tension : 10 à ~14.8V (tension recommandée 12V)
 * courant consommé : 
-  * minimum : moteurs en mode *compliant* -> 1.53 A 
-  * maximum : mesuré lors d'une séquence qui met en mouvement la partie haute de Poppy (bras, torse...) -> 2.5 A
+  * minimum : Poppy au repos, moteurs en mode *compliant* -> 1.53 A 
+  * maximum : mesuré lors d'une séquence mettant en mouvement la partie haute de Poppy (bras, torse...) -> 2.5 A
 
 ###Limites de couple (couple de décrochage)
 *  MX-64 : 5.5 Nm (à 11.1V, 3.9A), 6.0N.m (à 12V, 4.1A)
