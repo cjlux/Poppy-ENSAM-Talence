@@ -15,8 +15,8 @@ Chaque partie utilise :
 [<img src="http://147.210.74.152/Poppy/5_Cablage/Bioloid3P.png" align="center">] (http://147.210.74.152/Poppy/5_Cablage/Bioloid3P.png)   
 - un circuit *SMPS2 Dynamixel*, pour l'alimentation 12 V pour des servomoteurs grâce à 4 connecteurs :
   - 2 connecteurs 3P, pour le branchement de servomoteurs Dynamixel série AX,
-  - 2 connecteurs 4P, pour le branchement de servomoteurs Dynamixel série DX ou RX.[<img src="http://147.210.74.152/Poppy/5_cablage/SMP2P_Dynamixel.png"  align="center">]
-(http://147.210.74.152/Poppy/5_Cablage/SMP2P_Dynamixel.png) 
+  - 2 connecteurs 4P, pour le branchement de servomoteurs Dynamixel série DX ou RX.
+  [<img src="http://147.210.74.152/Poppy/5_Cablage/SMP2P_Dynamixel.png" align="center">] (http://147.210.74.152/Poppy/5_Cablage/SMP2P_Dynamixel.png) 
 
 Les servomoteurs dynamixel sont *chaînés* les uns autres par un bus numérique qui les relie entre eux. Dans une chaîne ainsi formée, un seul des servomteurs est relié à un *Bioloid 3P Extension Board* ou à un *SMPS2 Dynamixel*.
 
