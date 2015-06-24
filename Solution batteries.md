@@ -1,10 +1,13 @@
-# Étude d'une solution batterie pour Poppy
+[ :arrow_left: Montage, Câblage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Premier%20d%C3%A9marrage.md)
+[ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
+
+# Faisabilité d'une solution "batteries" pour Poppy
 
 ###Consommation des servomoteurs de Poppy
 * plage de tension : 10 à ~14.8V (tension recommandée 12V)
 * courant consommé : 
-  * minimum : moteurs en mode *compliant* -> 1.53 A 
-  * maximum : mesuré lors d'une séquence qui met en mouvement la partie haute de Poppy (bras, torse...) -> 2.5 A
+  * minimum : Poppy au repos, moteurs en mode *compliant* -> 1.53 A 
+  * maximum : mesuré lors d'une séquence mettant en mouvement la partie haute de Poppy (bras, torse...) -> 2.5 A
 
 ###Limites de couple (couple de décrochage)
 *  MX-64 : 5.5 Nm (à 11.1V, 3.9A), 6.0N.m (à 12V, 4.1A)
@@ -20,7 +23,7 @@ Théoriquement, avec des batteries permettant d'obtenir une capacité de 2600 mA
   * **NiMh** : (nickel-métal hydrure) *effet mémoire* très faible, technologie offrant un bon compromis (prix/capacité/poids), mais nécessite un temps de charge assez long.
 - **Plomb-acide** : ces batteries ont le défaut d'être volumineuses et lourdes, elles doivent être régulièrement chargées et ne permettent pas une vitesse de décharge aussi élevée que les autres technologies.
 - **Lithium-ion** : batteries légères, pas d'*effet mémoire*, temps de décharge élevé avec une relativement bonne capacité. La tension d'un élément est voisinne de 3.7 V. Les solutions possibles pour atteindres les 12 V nécessaire pour Poppy sont :
-  - trois batteries séparées de 3.7 V, banchées en série. Poids: ~60g chacune; prix par batterie: ~ 20€. Permet de disposer les batteries séparémment dans la structure de Poppy <BR>
+  - trois batteries séparées de 3.6 V, banchées en série. Poids: ~60g chacune; prix par batterie: ~ 20€. Permet de disposer les batteries séparémment dans la structure de Poppy <BR>
 [<img src="http://147.210.74.152/Poppy/9_Solution_batteries/Batterie-lithium-ion_LG_RS.png" width="100" height="60" >] (http://147.210.74.152/Poppy/9_Solution_batteries/Batterie-lithium-ion_LG_RS.png)
   - un *pack batterie* de 11.1 V, poids: 150g, prix: environ 50 € <BR>
 [<img src="http://147.210.74.152/Poppy/9_Solution_batteries/Pack-lithium-ion_LG_RS1.png" width="180" height="100" >] (http://147.210.74.152/Poppy/9_Solution_batteries/Pack-lithium-ion_LG_RS1.png)
@@ -43,9 +46,8 @@ consommation sous 5V : 2A. On peut utiliser un convertisseur de tension 12 V->5 
 
 #Solution mise en œuvre
 
-3 Accumulateurs LG Lithium-Ion  en série avec les caractéristiques suivantes:
-[<img src="http://147.210.74.152/Poppy/9_Solution_batteries/tab_bat.png" width="400" height="80" >]
-(http://147.210.74.152/Poppy/9_Solution_batteries/tab_bat.png)<BR>
+3 Accumulateurs LG Lithium-Ion en série, tension 3.6 V, capacité de 2600 mAh, masse 60g :
+
 [<img src="http://147.210.74.152/Poppy/9_Solution_batteries/f11.png" width="350" height="160" >]
 (http://147.210.74.152/Poppy/9_Solution_batteries/f11.png)
 
@@ -53,3 +55,5 @@ Des câbles avec connecteurs permettent de brancher au choix les batterie ou l'a
 [<img src="http://147.210.74.152/Poppy/9_Solution_batteries/f12.png" width="700" height="160" >]
 (http://147.210.74.152/Poppy/9_Solution_batteries/f12.png)
 
+[ :arrow_left: Montage, Câblage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Premier%20d%C3%A9marrage.md)
+[ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)

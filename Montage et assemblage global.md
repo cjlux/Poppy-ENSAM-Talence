@@ -1,3 +1,7 @@
+[ :arrow_left: Montage, paramétrage des servomoteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage,%20paramétrage%20des%20servomoteurs.md)
+[ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
+[ :arrow_right: Cablage des servo-moteurs] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Cablage%20des%20servomoteurs.md)
+
 # Montage
 
 ## Jambes
