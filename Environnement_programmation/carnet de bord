@@ -16,6 +16,5 @@ Ceci est un carnet de bord qui contient des informations essentielles sur les mo
 31/07/2015 :
 * installation de cairo-dock
 * configuration de cairo-dock
-* création d'un launcher pour le logiciel vrep. Commande utilisée : 
-cd /home/poppy/Documents/Poppy\ Project/V-rep/V-REP_PRO_EDU_V3_2_1_64_Linux/; bash vrep.sh
+* création d'un launcher pour le logiciel vrep.
 
