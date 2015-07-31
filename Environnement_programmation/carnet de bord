@@ -1,0 +1,21 @@
+Ceci est un carnet de bord qui contient des informations essentielles sur les modifications effectuées autour de l'environnement du projet Poppy sur cette machine.
+
+
+30/07/2015 :
+* installation de anaconda python 2.7 (site : http://continuum.io/downloads)
+* mise à jour de conda via le terminal
+* installation ou mise à jour des modules via pip : pyserial / numpy / scipy/ enum34 / sphinx / PyQt4 / bottle / tornoado
+* installation via pip des modules : pypot / poppy-humanoid
+* installation de V-REP PRO EDU V3.2.1 en 64bits linux à partir du site : http://www.coppeliarobotics.com/downloads.html
+* installation de git : apt-get install git
+* Recuperation du chemin d'installation de pypot : /home/poppy/anaconda/lib/python2.7/site-packages/pypot
+* Recuperation du chemin d'installation de poppy-humanoid : /home/poppy/anaconda/lib/python2.7/site-packages/poppy_humanoid
+* Documentation pour l'utilisation de conda : http://conda.pydata.org/docs/index.html
+* Documentation de pypot : http://poppy-project.github.io/pypot/
+
+31/07/2015 :
+* installation de cairo-dock
+* configuration de cairo-dock
+* création d'un launcher pour le logiciel vrep. Commande utilisée : 
+cd /home/poppy/Documents/Poppy\ Project/V-rep/V-REP_PRO_EDU_V3_2_1_64_Linux/; bash vrep.sh
+

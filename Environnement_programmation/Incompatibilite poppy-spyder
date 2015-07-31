@@ -1,0 +1,5 @@
+Pourquoi Poppy ne fonctionne pas sous spyder ?
+L'installation des différents modules de poppy s'est faite dans l'environnement anaconda. 
+
+Pourquoi l'execution fonctionne sous python dans le terminal ?
+Par défaut python et ipython se lance dans l'environnement anaconda où les modules ont été installés
