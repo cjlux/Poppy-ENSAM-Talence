@@ -13,8 +13,17 @@ Ceci est un carnet de bord qui contient des informations essentielles sur les mo
 * Documentation pour l'utilisation de conda : http://conda.pydata.org/docs/index.html
 * Documentation de pypot : http://poppy-project.github.io/pypot/
 
+
 31/07/2015 :
 * installation de cairo-dock
 * configuration de cairo-dock
 * création d'un launcher pour le logiciel vrep.
+* Documentation pour l'utilisation de git (application locale) avec github :
+http://git-scm.com/doc
+* résolution partielle de l'utilisation de spyder avec vrep et poppy :
+--- ouvrir un terminal -> entrer la commande : spyder
+--- le logiciel se lance en utilisant l'environnement anaconda
+--- !!! ne pas utiliser spyder installé avec le gestionnaire de packets !!!
+
+
 

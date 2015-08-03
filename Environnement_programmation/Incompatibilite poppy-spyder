@@ -3,3 +3,5 @@ L'installation des différents modules de poppy s'est faite dans l'environnement
 
 Pourquoi l'execution fonctionne sous python dans le terminal ?
 Par défaut python et ipython se lance dans l'environnement anaconda où les modules ont été installés
+
+Solution : En executant spyder depuis un terminal, iPython se lance avec l'environnement anaconda dans spyder. Je n'arrive pas à créer de launcher qui simule cela, il faut donc manuellement ouvrir un terminal et rentrer la commande "spyder".
