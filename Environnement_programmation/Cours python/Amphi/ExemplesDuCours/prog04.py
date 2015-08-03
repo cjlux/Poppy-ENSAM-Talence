@@ -1,4 +1,4 @@
-def P(t):
+3def P(t):
     r = 2.3*t**4-3.4*t**3-2.1*t**2+1.2*t+2
     return r
 def PrintP(d):
