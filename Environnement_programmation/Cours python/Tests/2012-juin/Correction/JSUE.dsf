@@ -1,0 +1,5 @@
+# data for a digital signal
+ 17     number of discrete values
+0.1      time step
+-8      start time
+-1 -2 -3 -4 -3 -2 -1 0 1 2 3 4 3 2 1 0

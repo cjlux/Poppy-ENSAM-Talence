@@ -1,0 +1,5 @@
+# data for a sampled signal
+20     number of discrete values
+0.005   time step
+0.0    start time
+sin(2*pi*10*t)

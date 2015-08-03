@@ -1,0 +1,1 @@
+# -*- coding: latin-1 -*-import sysfrom PyQt4.QtGui import QApplicationfrom ModMainWindow import MainWindowdef main(args):    app=QApplication(args)    win=MainWindow()    win.show()    # main loop waiting mouse events :    r=app.exec_()    return rif __name__=="__main__":    main(sys.argv)

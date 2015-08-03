@@ -1,0 +1,1 @@
+dataFile="data001.txt"## Lecture du fichier ligne par ligne#lu=[]f = open(dataFile, 'r')for line in f:    print line    lu.append(line)f.close()print lu

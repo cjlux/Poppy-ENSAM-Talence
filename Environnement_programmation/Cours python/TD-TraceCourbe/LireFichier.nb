@@ -1,0 +1,628 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19455,        619]
+NotebookOptionsPosition[     17024,        534]
+NotebookOutlinePosition[     17473,        551]
+CellTagsIndexPosition[     17430,        548]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Off", "[", "rmnsm", "]"}], ";", 
+  RowBox[{"Remove", "[", "\"\<Global`*\>\"", "]"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Fixer le r\[EAcute]pertoire de travail :\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.528384347187655*^9, 3.528384375259684*^9}}],
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5275231655564637`*^9, 3.5275231773509617`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Recherche des fichier .txt", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"FileNames", "[", "]"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringTake", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"-", "4"}]}], "]"}], "\[Equal]", "\"\<.txt\>\""}], "&"}]}], 
+  "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Nom du fichier de donn\[EAcute]es", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dataName", "=", "\"\<data001.txt\>\""}], ";"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Lecture du fichier et filtrage", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["En bloc", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{"OpenRead", "[", "dataName", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"luBloc", "=", "\[IndentingNewLine]", 
+   RowBox[{"Select", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ReadList", "[", 
+      RowBox[{"f", ",", "String"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "\[NotEqual]", "\"\<\>\""}], "&&", 
+       RowBox[{
+        RowBox[{"StringTake", "[", 
+         RowBox[{"#", ",", "1"}], "]"}], "\[NotEqual]", "\"\<#\>\""}]}], 
+      "&"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Close", "[", "f", "]"}], ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"InputForm", "[", "luBloc", "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ligne par ligne", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{"OpenRead", "[", "dataName", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lu", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ligne", "=", 
+   RowBox[{"Read", "[", 
+    RowBox[{"f", ",", "String"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"ligne", "\[NotEqual]", "\"\<EndOfFile\>\""}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ligne", "\[NotEqual]", "\"\<\>\""}], " ", "&&", " ", 
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"ligne", ",", "1"}], "]"}], "\[NotEqual]", "\"\<#\>\""}]}], 
+       ",", 
+       RowBox[{"lu", "=", 
+        RowBox[{"Join", "[", 
+         RowBox[{"lu", ",", 
+          RowBox[{"{", "ligne", "}"}]}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ligne", "=", 
+      RowBox[{"Read", "[", 
+       RowBox[{"f", ",", "String"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Close", "[", "f", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"InputForm", "[", "lu", "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"lu", "\[Equal]", "luBloc"}]], "Input"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Traitement des cha\[IHat]nes de caract\[EGrave]res pour obtenir une liste de \
+triplets num\[EAcute]riques {time, strain, stress} :\
+\>", "Section"],
+
+Cell[TextData[{
+ StyleBox["StringSplit[]",
+  FontFamily->"Courier 10 Pitch"],
+ " permet de d\[EAcute]couper la cha\[IHat]ne de caract\[EGrave]res contenant \
+des s\[EAcute]parateurs  en une liste de cha\[IHat]nes:"
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{"lu", "[", 
+  RowBox[{"[", "2", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"StringSplit", "[", "lu", "]"}], "[", 
+  RowBox[{"[", "2", "]"}], "]"}]}], "Input"],
+
+Cell[TextData[{
+ StyleBox["StringReplace[]",
+  FontFamily->"Courier 10 Pitch"],
+ " permet de remplacer la notation \[OpenCurlyDoubleQuote]e3\
+\[CloseCurlyDoubleQuote] en \[OpenCurlyDoubleQuote]*10^3\
+\[CloseCurlyDoubleQuote] :"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"StringReplace", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"StringSplit", "[", "lu", "]"}], "[", 
+    RowBox[{"[", "2", "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<e\>\"", "\[Rule]", "\"\<*10^\>\""}], "}"}]}], "]"}]], "Input"],
+
+Cell["\<\
+On peut construire la liste des triplets de valeurs num\[EAcute]riques {time, \
+strain, stress} :\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Str2Fl", "=", 
+   RowBox[{
+    RowBox[{"ToExpression", "[", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<e\>\"", "\[Rule]", "\"\<*10^\>\""}], "}"}]}], "]"}], 
+     "]"}], "&"}]}], ";", 
+  RowBox[{"Str2Fl", "[", "\"\<1.2e-3\>\"", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"StringSplit", "[", 
+  RowBox[{"lu", "[", 
+   RowBox[{"[", "2", "]"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Str2ListFl", "=", 
+   RowBox[{
+    RowBox[{"Str2Fl", "/@", 
+     RowBox[{"StringSplit", "[", "#", "]"}]}], "&"}]}], ";", 
+  RowBox[{"Str2ListFl", "[", 
+   RowBox[{"lu", "[", 
+    RowBox[{"[", 
+     RowBox[{"-", "1"}], "]"}], "]"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"luNumeric", "=", 
+  RowBox[{"Str2ListFl", "/@", "lu"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Conversion en MPa et en %", "Subsection",
+ CellChangeTimes->{{3.5293473287461944`*^9, 3.529347330541297*^9}}],
+
+Cell[BoxData[
+ RowBox[{"luNumeric", "=", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"MPa", "=", 
+       RowBox[{"N", "[", 
+        RowBox[{"10", "^", 
+         RowBox[{"-", "6"}]}], "]"}]}], ",", 
+      RowBox[{"percent", " ", "=", " ", "100."}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "MPa"}], ",", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], " ", "percent"}]}], "}"}], "&"}], "/@",
+      "luNumeric"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5293472693767986`*^9, 3.5293472853337116`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Trac\[EAcute] des courbes", "Section",
+ CellChangeTimes->{{3.527528249299017*^9, 3.5275283035629077`*^9}, {
+  3.528384487685711*^9, 3.528384503728945*^9}, {3.528385153034616*^9, 
+  3.528385158534096*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Courbes fonction du temps", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Extraction des  couples {time,stress} et {time,strain}:", \
+"Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"stressTime", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Take", "[", 
+     RowBox[{"#", ",", "2"}], "]"}], "&"}], "/@", "luNumeric"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"strainTime", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "&"}], "/@", 
+   "luNumeric"}]}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Trac\[EAcute]", "Subsubsection",
+ CellChangeTimes->{{3.5292163329156685`*^9, 3.5292163338828707`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"figTime", "=", "\[IndentingNewLine]", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"CsurD", "=", "50."}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"ListPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"stressTime", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"CsurD", " ", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], "&"}], "/@", 
+           "strainTime"}]}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"AbsoluteThickness", "[", "1.", "]"}], ",", "Blue"}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"AbsoluteThickness", "[", "1.", "]"}], ",", "Red"}], 
+            "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"ListPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"stressTime", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"CsurD", " ", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], "&"}], "/@", 
+           "strainTime"}]}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"AbsolutePointSize", "[", "5.", "]"}], ",", "Blue"}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"AbsolutePointSize", "[", "5.", "]"}], ",", "Red"}], 
+            "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Joined", "\[Rule]", "False"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"PlotRange", "->", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "2.3"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "50"}], "}"}]}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"PlotLabel", "\[Rule]", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Stress, strain versus time\>\"", ",", 
+         RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+         RowBox[{"FontSize", "\[Rule]", "14"}], ",", 
+         RowBox[{"FontFamily", "\[Rule]", " ", "\"\<Arial\>\""}]}], "]"}]}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"FrameLabel", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Time [s]\>\"", ",", 
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<Stress [MPa]\>\"", ",", 
+           RowBox[{"FontColor", "\[Rule]", "Blue"}]}], "]"}], ",", 
+         "\"\< \>\"", ",", 
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<Strain [%]\>\"", ",", 
+           RowBox[{"FontColor", "\[Rule]", "Red"}]}], "]"}]}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"FrameTicks", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "Automatic", ",", "Automatic", ",", "Automatic", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Join", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"CsurD", " ", "#"}], ",", 
+               RowBox[{"ToString", "[", 
+                RowBox[{"NumberForm", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", "1"}], "}"}]}], "]"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.007", ",", "0.007"}], "}"}]}], "}"}], "&"}], "/@", 
+            RowBox[{"Range", "[", 
+             RowBox[{"0", ",", "1.", ",", "0.2"}], "]"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"CsurD", " ", "#"}], ",", "\"\<\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"0.005", ",", "0."}], "}"}]}], "}"}], "&"}], "/@", 
+            RowBox[{"Range", "[", 
+             RowBox[{"0", ",", "1.", ",", "0.05"}], "]"}]}]}], 
+          "\[IndentingNewLine]", "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Background", "\[Rule]", 
+       RowBox[{"Opacity", "[", 
+        RowBox[{"0.1", ",", "Yellow"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"ImageSize", "\[Rule]", "500"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"BaseStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
+         RowBox[{"FontFamily", "\[Rule]", " ", "\"\<Times New Roman\>\""}]}], 
+        "}"}]}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5293473017356496`*^9, 3.5293473018906584`*^9}, {
+  3.5293473569768095`*^9, 3.529347386296486*^9}, {3.529347530088711*^9, 
+  3.5293475317968082`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Courbe d\[EAcute]formation contrainte", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"strainstress", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Reverse", "[", 
+     RowBox[{"Take", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"-", "2"}]}], "]"}], "]"}], "&"}], "/@", 
+   "luNumeric"}]}]], "Input",
+ CellChangeTimes->{{3.529347415977184*^9, 3.5293474305200157`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"figStrainStress", "=", "\[IndentingNewLine]", 
+  RowBox[{"ListPlot", "[", 
+   RowBox[{"strainstress", ",", "\[IndentingNewLine]", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"AbsoluteThickness", "[", "1.", "]"}], ",", 
+        RowBox[{"AbsolutePointSize", "[", "5.", "]"}], ",", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"0", ",", "0.6", ",", "0"}], "]"}]}], "}"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"PlotRange", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0.6"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "40"}], "}"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"FrameLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Strain [%]\>\"", ",", "\"\<Stress [MPa]\>\"", ",", "\"\< \>\"", 
+       ",", "\"\< \>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"PlotLabel", "\[Rule]", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<Stress versus strain\>\"", ",", 
+       RowBox[{"FontSize", "\[Rule]", "14"}], ",", 
+       RowBox[{"FontColor", "\[Rule]", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"0", ",", "0.6", ",", "0"}], "]"}]}], ",", 
+       RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+       RowBox[{"FontFamily", "\[Rule]", " ", "\"\<Arial\>\""}]}], "]"}]}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Background", "\[Rule]", 
+     RowBox[{"Opacity", "[", 
+      RowBox[{"0.1", ",", "Yellow"}], "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"ImageSize", "\[Rule]", "500"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"BaseStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
+       RowBox[{"FontFamily", "\[Rule]", " ", "\"\<Times New Roman\>\""}]}], 
+      "}"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.52934743689338*^9, 3.5293474813399224`*^9}, {
+  3.5293477517923913`*^9, 3.529347755930628*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Assemblage", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"figTot", "=", 
+  RowBox[{"GraphicsGrid", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "figTime", "}"}], ",", 
+      RowBox[{"{", "figStrainStress", "}"}]}], "}"}], ",", 
+    RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{3.5293474980058756`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exportation de la figure", "Section"],
+
+Cell[BoxData[
+ RowBox[{"imageName", "=", 
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"dataName", ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<.txt\>\"", "\[Rule]", "\"\<-Mma.png\>\""}], "}"}]}], 
+   "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"imageName", ",", "figTot", ",", "\"\<PNG\>\""}], "]"}]], "Input"]
+}, Open  ]]
+},
+WindowSize->{1134, 857},
+WindowMargins->{{349, Automatic}, {Automatic, -25}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 131, 3, 35, "Input"],
+Cell[CellGroupData[{
+Cell[713, 27, 139, 3, 32, "Subsubsection"],
+Cell[855, 32, 174, 3, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1066, 40, 51, 0, 32, "Subsubsection"],
+Cell[1120, 42, 269, 9, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1426, 56, 58, 0, 32, "Subsubsection"],
+Cell[1487, 58, 92, 2, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1616, 65, 49, 0, 88, "Section"],
+Cell[CellGroupData[{
+Cell[1690, 69, 29, 0, 46, "Subsection"],
+Cell[1722, 71, 703, 18, 168, "Input"],
+Cell[2428, 91, 67, 1, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2532, 97, 37, 0, 46, "Subsection"],
+Cell[2572, 99, 1252, 36, 212, "Input"],
+Cell[3827, 137, 62, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3938, 144, 158, 3, 121, "Section"],
+Cell[4099, 149, 226, 5, 35, "Text"],
+Cell[4328, 156, 197, 5, 58, "Input"],
+Cell[4528, 163, 239, 6, 35, "Text"],
+Cell[4770, 171, 258, 7, 35, "Input"],
+Cell[5031, 180, 121, 3, 34, "Text"],
+Cell[5155, 185, 341, 10, 35, "Input"],
+Cell[5499, 197, 117, 3, 35, "Input"],
+Cell[5619, 202, 285, 9, 35, "Input"],
+Cell[5907, 213, 91, 2, 35, "Input"],
+Cell[CellGroupData[{
+Cell[6023, 219, 115, 1, 46, "Subsection"],
+Cell[6141, 222, 784, 24, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6974, 252, 210, 3, 88, "Section"],
+Cell[CellGroupData[{
+Cell[7209, 259, 47, 0, 46, "Subsection"],
+Cell[CellGroupData[{
+Cell[7281, 263, 82, 1, 32, "Subsubsection"],
+Cell[7366, 266, 168, 5, 35, "Input"],
+Cell[7537, 273, 289, 10, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7863, 288, 108, 1, 32, "Subsubsection"],
+Cell[7974, 291, 5486, 136, 564, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13509, 433, 59, 0, 46, "Subsection"],
+Cell[13571, 435, 303, 9, 35, "Input"],
+Cell[13877, 446, 2308, 51, 322, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16222, 502, 32, 0, 46, "Subsection"],
+Cell[16257, 504, 323, 9, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16629, 519, 43, 0, 88, "Section"],
+Cell[16675, 521, 215, 6, 35, "Input"],
+Cell[16893, 529, 115, 2, 35, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
