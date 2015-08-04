@@ -17,8 +17,25 @@ La dérivée est calculée par la méthode des acroissements finis.
 jacobienne retourne une matrice.
         --- Fin description ---
 """
-def jacobienne(f,nb_q,q,h=0.01):
+def jacobian(f,nb_q,q,h=0.01):
+    if len(q) != nb_q:
+        return False
+    n = len(q)
+    m = len(f(q))
     
+    
+    dh = []
+    for i in range(n): dh.append(0):
+    
+    
+    
+    j = []
+    for i in range(n):
+        dh[i] = h
+        j.append(1/dh*(f(q+dh)-f(q)))
+        dh[i] = 0
+    j = np.matrix(j)
+    j = j.T()
     
     return j
 
@@ -84,7 +101,7 @@ def ik_num(f, nb_q, map_qinit,  xfinal, it=1, imax=10):
             dx = xi-xinit
             
             # Calcul numérique de la jacobienne j au point considéré
-            j = jacobienne(f,nb_q,qinit)
+            j = jacobian(f,nb_q,qinit)
             
             # calcul de la pseudo inverse de j, notée j_plus, au point considéré
             j_plus = np.linalg.pinv(j)
