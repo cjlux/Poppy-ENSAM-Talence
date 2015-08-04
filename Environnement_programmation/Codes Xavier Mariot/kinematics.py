@@ -8,6 +8,7 @@ Created on Mon Aug  3 12:42:24 2015
 
 import numpy as np
 from scipy.stats import threshold
+import math
 
 
 """     --- Description jacobian ---
@@ -58,7 +59,7 @@ d'obtenir la position xfinal en sortie.
 
         --- Fin de la description ---
 """
-def ik_num(f, nb_q, map_qinit, xfinal, it=1, imax=10):
+def ik_num(f, nb_q, map_qinit, xfinal, it=1, imax=50):
     """     === Descriptions des arguments ===
     
     f           --->    'arg: nd.array 1D; return: nd.array 1D' fonction vectorielle représentative du modèle de cinématique direct
@@ -93,19 +94,25 @@ def ik_num(f, nb_q, map_qinit, xfinal, it=1, imax=10):
     qinit = map_qinit[imin]
     xinit = map_xinit[imin]
     
+    print "ik: qinit = ", qinit
+    print "ik: xinit = ", xinit
+    
     """ Décoposition du trajet entre xinit et xfinal en plusieurs petits déplacements """
+    """
     delta_x = xfinal-xinit # calcul du vecteur déplacement total.
     nb_div = np.floor(np.linalg.norm(delta_x)/(5*it)) + 1 # l'unité de découpage est arbitrairement 5*it
     if nb_div > 1:
         dx = (1/float(nb_div))*delta_x
     
     xf=[] # xf sera la liste des points intermédiaires à atteindre.
-    for i in range(nb_div + 1): # on crée la liste des points intermédiaires
+    for i in range(int(nb_div + 1)): # on crée la liste des points intermédiaires
         xf.append(xinit + i*dx)
     
     xf[-1] = xfinal # On s'assure que la dernière valeur ne sera pas altérée par des erreurs de calcul
+    """    
     
     """ Application de la méthode de jacobi pour chaque trajet intermédiaire """
+    """
     for xi in xf:
         for i in range(imax):
             # calcul de dx à l'itération considérée
@@ -128,9 +135,70 @@ def ik_num(f, nb_q, map_qinit, xfinal, it=1, imax=10):
             if np.linalg.norm(xi-xinit) <= it :
                 break
             # si la condition d'arrêt n'est pas vérifiée, on itère le calcul jusqu'à imax fois 
+    """
+    xi = xfinal
+    for i in range(imax):
+        # calcul de dx à l'itération considérée
+        dx = xi-xinit
+        dx = np.matrix(dx)
+        dx = dx.T # dx est maintenant un vecteur colonne qui va pouvoir être mutiplié par une matrice
+        
+        # Calcul numérique de la jacobienne j au point considéré
+        j = jacobian(f,nb_q,qinit,1e-6)
+        
+        
+        # incrémentation de qinit au point considéré
+        # NB : j.I retourne la pseudo inverse de j
+        qinit = qinit + (j.I*dx).T.getA()[0]
+        print i, " : ", qinit
+        # mise à jour de xinit
+        xinit = f(qinit)
+        print i, " : ", xinit
+        
+        # vérification de la condition d'arrêt
+        if np.linalg.norm(xi-xinit) <= it :
+            break
+        # si la condition d'arrêt n'est pas vérifiée, on itère le calcul jusqu'à imax fois
     
+    print i
     # A la sortie de la méthode de jacobi, qinit vérifie ||xfinal - f(qinit)|| <= it
     return qinit
+    
+def ik_num_base(f, nb_q, qi, xfinal, it=1, imax=50):
+    qinit = qi
+    xinit = dk_l_hand(qinit)
+    
+    print "ik: qinit = ", qinit
+    print "ik: xinit = ", xinit
+    
+    xi = xfinal
+    for i in range(imax):
+        # calcul de dx à l'itération considérée
+        dx = xi-xinit
+        dx = np.matrix(dx)
+        dx = dx.T # dx est maintenant un vecteur colonne qui va pouvoir être mutiplié par une matrice
+        
+        # Calcul numérique de la jacobienne j au point considéré
+        j = jacobian(f,nb_q,qinit,1e-6)
+        
+        
+        # incrémentation de qinit au point considéré
+        # NB : j.I retourne la pseudo inverse de j
+        qinit = qinit + (j.I*dx).T.getA()[0]
+        print i, " : ", qinit
+        # mise à jour de xinit
+        xinit = f(qinit)
+        print i, " : ", xinit
+        
+        # vérification de la condition d'arrêt
+        if np.linalg.norm(xi-xinit) <= it :
+            break
+        # si la condition d'arrêt n'est pas vérifiée, on itère le calcul jusqu'à imax fois
+    
+    print i
+    # A la sortie de la méthode de jacobi, qinit vérifie ||xfinal - f(qinit)|| <= it
+    return qinit
+    
 
 """     --- Définition de dk_l_hand    ---
 
@@ -141,10 +209,32 @@ elle prend comme argument un 'numpy.array 1D' noté q qui contient les angles de
 du bras gauche dans l'ordre suivant : q=[l_shoulder_y, l_shoulder_x, l_arm_z, l_elbow_y].
 Les zéros de chaque angles et les sens positifs sont définis à partir de la config par défaut de poppy
 voir shéma cinématique du bras gauche dans la doc pour leur représentation.
+voir 'cinematique directe.nb' pour le calcul de la formule de x, y et z
 
 """
 def dk_l_hand(q=np.array([0,0,0,0])):
+    x = -100*np.cos(q[1])*np.sin(q[0]) - 90*(np.cos(q[1])*np.cos(q[3])*np.sin(q[0]) + (np.cos(q[0])*np.cos(q[2]) + np.sin(q[0])*np.sin(q[1])*np.sin(q[2]))*np.sin(q[3]))
+    y = 30 + 100*np.sin(q[1]) - 90*(-np.cos(q[3])*np.sin(q[1]) + np.cos(q[1])*np.sin(q[2])*np.sin(q[3]))
+    z = -100*np.cos(q[0])*np.cos(q[1]) - 90*(np.cos(q[0])*np.cos(q[1])*np.cos(q[3]) + (-np.cos(q[2])*np.sin(q[0]) + np.cos(q[0])*np.sin(q[1])*np.sin(q[2]))*np.sin(q[3]))
     
+    return np.array([x,y,z])
 
-if __name__=='__main':
+
+if __name__=='__main__':
+    
+    q = np.array([0,45,0,-90])
+    q = map(math.radians,q)
+    qinit = np.array(map(math.radians,[0,45,0,-85]))
+    print "mapping = ", qinit
+    
+    xfinal=dk_l_hand(q)
+    print "xfinal th = ",xfinal
+    
+    qf = ik_num_base(dk_l_hand,4,qinit,xfinal)
+    print "xfinal calc = ",dk_l_hand(qf)
+    
+    qf = map(math.degrees,qf)
+    
+    print "qf en degree = ",qf
+    
     
