@@ -25,5 +25,19 @@ http://git-scm.com/doc
 --- le logiciel se lance en utilisant l'environnement anaconda
 --- !!! ne pas utiliser spyder installé avec le gestionnaire de packets !!!
 
+03/08/2015 :
+* Synchronisation du projet Poppy-ENSAM avec le compte github XavierMariot
+---> Fork du projet sur le compte 'XavierMariot'
+* Clone du Fork du compte XavierMariot dans le dossier : /home/poppy/poppy-project
+---> ce clone correspond au remote 'origin'
+* Synchronisation du projet avec les ordinateurs personnels de Xavier Mariot
+* Création du remote 'upstream' pour pouvoir envoyer le projet vers la version sur github du compte 'cjlux'
+---> Envois moins réguliers que sur 'XavierMariot' (seules les versions finalisées sont 'push' sur le remote 'upstream')
+* Avancement de la programmation de cinématique inverse. Créetion du fichier kinemtic.py
 
+04/08/2015 :
+* Installation de mathématica 10.2
+---> Clef d'activation utilisée : 4651-8575-98W47Q
+---> Compte Wolfram utilisé : xavier.mariot@ensam.eu
+* Finalisation de l'algorithme de cinématique inverse dans kinematic.py
 
