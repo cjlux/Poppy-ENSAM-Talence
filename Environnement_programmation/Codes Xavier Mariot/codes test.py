@@ -10,6 +10,9 @@ Ce script temporaire est sauvegardé ici :
 # bibliothèques nécessaires au fonctionnement de Poppy humanoide
 import pypot
 from poppy.creatures import PoppyHumanoid
+import kinematics as kin
+
+
 
 # démmarrer la simulation poppy dans vrep. Il faut lancer V-rep avant d'executer le code.
 poppy = PoppyHumanoid(simulator='vrep')
