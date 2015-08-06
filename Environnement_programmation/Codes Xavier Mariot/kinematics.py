@@ -47,9 +47,9 @@ def jacobian(f,nb_q,q,h=0.01):
         dh[i] = 0 # On remet la ième composante de dh à zéro pour la suite
     
     j = np.matrix(j) # On transforme j en matrice, pour l'instant on a en fait la transposée de la jacobienne de f en q
-    j = threshold(j.T,1e-13) # On obtient la jacobienne en tronquant les zéros numériques
+    # j = threshold(j.T,1e-13) # On obtient la jacobienne en tronquant les zéros numériques
     
-    return np.matrix(j)
+    return j.T
 
 """     --- Description ik_num ---
 
@@ -164,40 +164,48 @@ def ik_num(f, nb_q, map_qinit, xfinal, it=1, imax=50):
     # A la sortie de la méthode de jacobi, qinit vérifie ||xfinal - f(qinit)|| <= it
     return qinit
     
-def ik_num_base(f, nb_q, qi, xfinal, it=1, imax=50):
-    qinit = qi
-    xinit = dk_l_hand(qinit)
+def ik_num_base(f, nb_q, qi, dxf, it=1, imax=50):
+    q = qi # on initialise la valeur des paramètres q
+    x = dk_l_hand(qinit) # on enregistre la position initiale du système
     
-    print "ik: qinit = ", qinit
-    print "ik: xinit = ", xinit
+    print "ik: qi = ", q
+    print "ik: xi = ", x
     
-    xi = xfinal
+    xf = x + dxf # on calcule la position finale à atteindre
+    dx = dxf # on initialise la variation à effectuer pour se rapprocher de la position finale
+    
     for i in range(imax):
-        # calcul de dx à l'itération considérée
-        dx = xi-xinit
+        # mise en forme de dx à l'itération considérée
         dx = np.matrix(dx)
         dx = dx.T # dx est maintenant un vecteur colonne qui va pouvoir être mutiplié par une matrice
         
+        print "dx = ",dx
         # Calcul numérique de la jacobienne j au point considéré
-        j = jacobian(f,nb_q,qinit,1e-6)
+        j = jacobian(f,nb_q,q,1e-6)
         
+        print "j = ",j
         
-        # incrémentation de qinit au point considéré
+        # incrémentation de q au point considéré
         # NB : j.I retourne la pseudo inverse de j
-        qinit = qinit + (j.I*dx).T.getA()[0]
-        print i, " : ", qinit
-        # mise à jour de xinit
-        xinit = f(qinit)
-        print i, " : ", xinit
+        q = q + (j.I*dx).T.getA()[0]
+        
+        print i, " : ", q
+        
+        # mise à jour de x
+        x = f(q)
+        print i, " : ", x
+        
+        # Calcul du nouveau dx au format 'numpy.array 1D'
+        dx = xf-x
         
         # vérification de la condition d'arrêt
-        if np.linalg.norm(xi-xinit) <= it :
+        if np.linalg.norm(dx) <= it :
             break
         # si la condition d'arrêt n'est pas vérifiée, on itère le calcul jusqu'à imax fois
     
     print i
     # A la sortie de la méthode de jacobi, qinit vérifie ||xfinal - f(qinit)|| <= it
-    return qinit
+    return q
     
 
 """     --- Définition de dk_l_hand    ---
@@ -213,28 +221,39 @@ voir 'cinematique directe.nb' pour le calcul de la formule de x, y et z
 
 """
 def dk_l_hand(q=np.array([0,0,0,0])):
-    x = -100*np.cos(q[1])*np.sin(q[0]) - 90*(np.cos(q[1])*np.cos(q[3])*np.sin(q[0]) + (np.cos(q[0])*np.cos(q[2]) + np.sin(q[0])*np.sin(q[1])*np.sin(q[2]))*np.sin(q[3]))
-    y = 30 + 100*np.sin(q[1]) - 90*(-np.cos(q[3])*np.sin(q[1]) + np.cos(q[1])*np.sin(q[2])*np.sin(q[3]))
-    z = -100*np.cos(q[0])*np.cos(q[1]) - 90*(np.cos(q[0])*np.cos(q[1])*np.cos(q[3]) + (-np.cos(q[2])*np.sin(q[0]) + np.cos(q[0])*np.sin(q[1])*np.sin(q[2]))*np.sin(q[3]))
+    ab = 30
+    bc = 30
+    cd = 70
+    de = 90
+    
+    x = -bc*np.cos(q[1])*np.sin(q[0]) - cd*np.cos(q[1])*np.sin(q[0]) - de*(np.cos(q[1])*np.cos(q[3])*np.sin(q[0]) + (np.cos(q[0])*np.cos(q[2]) + np.sin(q[0])*np.sin(q[1])*np.sin(q[2]))*np.sin(q[3]))
+    y = ab + bc*np.sin(q[1]) + cd*np.sin(q[1]) - de*(-np.cos(q[3])*np.sin(q[1]) + np.cos(q[1])*np.sin(q[2])*np.sin(q[3]))
+    z = -bc*np.cos(q[0])*np.cos(q[1]) - cd*np.cos(q[0])*np.cos(q[1]) - de*(np.cos(q[0])*np.cos(q[1])*np.cos(q[3]) + (-np.cos(q[2])*np.sin(q[0]) + np.cos(q[0])*np.sin(q[1])*np.sin(q[2]))*np.sin(q[3]))
     
     return np.array([x,y,z])
 
 
 if __name__=='__main__':
     
-    q = np.array([0,45,0,-90])
-    q = map(math.radians,q)
-    qinit = np.array(map(math.radians,[0,45,0,-85]))
+    
+    qinit = np.array(map(math.radians,[1,45,1,-85]))
     print "mapping = ", qinit
     
-    xfinal=dk_l_hand(q)
+    dx = np.array([10,20,10])
+    xi = dk_l_hand(qinit)
+    xfinal = xi + dx
+    
+    print "xinit th = ",xi
     print "xfinal th = ",xfinal
     
-    qf = ik_num_base(dk_l_hand,4,qinit,xfinal)
+    print jacobian(dk_l_hand,4,qinit,1e-6)
+    
+    
+    qf = ik_num_base(dk_l_hand,4,qinit,dx)
     print "xfinal calc = ",dk_l_hand(qf)
     
     qf = map(math.degrees,qf)
     
     print "qf en degree = ",qf
-    
+     
     
