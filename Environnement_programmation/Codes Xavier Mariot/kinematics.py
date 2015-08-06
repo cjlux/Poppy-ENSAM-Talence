@@ -212,6 +212,7 @@ def dk_l_hand(q=np.array([0,0,0,0])):
     
     return np.array([x,y,z])
 
+mapping_dk_l_hand = np.array()
 
 if __name__=='__main__':
     
@@ -228,17 +229,13 @@ if __name__=='__main__':
     
     print "\n\n"
     
-    qf = ik_num_base(dk_l_hand,4,qinit,dx)
-    qfbis = ik_num(dk_l_hand,4,np.array([qinit,[0,0,0,0]]),xfinal)
+    qf = ik_num(dk_l_hand,4,np.array([qinit,[0,0,0,0]]),xfinal)
     
     print "xfinal calc = ",dk_l_hand(qf)
-    print "xfinal bis calc = ",dk_l_hand(qfbis)
     print "\n\n"
     
     qf = map(math.degrees,qf)
-    qfbis = map(math.degrees,qfbis)
     
     print "qf en degree = ",qf
-    print "qfbis en degree = ",qfbis
      
     
