@@ -212,7 +212,14 @@ def dk_l_hand(q=np.array([0,0,0,0])):
     
     return np.array([x,y,z])
 
-mapping_dk_l_hand = np.array()
+mapping_dk_l_hand = np.array([
+map(math.radians,[-60,30,-60,-100]),
+map(math.radians,[-120,20,-45,-70]),
+map(math.radians,[15,10,-20,-30]),
+map(math.radians,[-45,45,-80,-40]),
+map(math.radians,[-80,70,-80,-60]),
+map(math.radians,[-120,45,-65,-30])
+])
 
 if __name__=='__main__':
     
@@ -229,7 +236,7 @@ if __name__=='__main__':
     
     print "\n\n"
     
-    qf = ik_num(dk_l_hand,4,np.array([qinit,[0,0,0,0]]),xfinal)
+    qf = ik_num(dk_l_hand,4,mapping_dk_l_hand,xfinal)
     
     print "xfinal calc = ",dk_l_hand(qf)
     print "\n\n"
