@@ -43,4 +43,6 @@ http://git-scm.com/doc
 
 06/08/2015 : 
 * toutes les fonctions de kinematics.py ---> OK
+* modification du fichier .bashrc dans /home/poppy pour rendre la console plus agréable à utiliser.
+* ajout d'alias pour faciliter l'utilisation de git sur le projet poppy
 
