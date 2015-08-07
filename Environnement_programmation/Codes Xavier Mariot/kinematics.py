@@ -298,6 +298,7 @@ if __name__=='__main__':
             import pypot
             from poppy.creatures import PoppyHumanoid
             import time
+            tempo = 4.
             
             # démmarre la simulation poppy dans vrep. 
             # Il faut lancer V-rep avant d'executer le code.
@@ -331,15 +332,17 @@ if __name__=='__main__':
                 dx = np.array([0.,0.,0.])
                 print "Entrer une chaine de caractère, chaque caractère aura "\
                 + "l'effet suivant :\n\
-                e ---> Avance le bras de 5mm\n\
-                d ---> Recule le bras de 5mm\n\
-                s ---> Bouge le bras vers la gauche de 5mm\n\
-                f ---> Bouge le bras vers la droite de 5mm\n\
+                e ---> Avance la main de 5mm\n\
+                d ---> Recule la main de 5mm\n\
+                s ---> Bouge la main vers la gauche de 5mm\n\
+                f ---> Bouge la main vers la droite de 5mm\n\
                 z ---> Monte la main de 5mm \n\
-                r ---> Descend le bras de 5mm \n\
+                r ---> Descend la main de 5mm \n\
+                x ---> Reduit la temporisation de 0.5s \n\
+                c ---> Augmente la temporisation de 0.5s \n\
                 q ---> Quitte le programme\n\n\
-                NB : Les caractères peuvent être entrés plusieurs fois pour \
-                additionner les effets."
+                NB : Les caractères peuvent être entrés plusieurs fois pour"\
+                +" additionner les effets."
                 
                 s=raw_input("==>")
                 
@@ -357,8 +360,21 @@ if __name__=='__main__':
                         dx[2] += 5
                     if c == 'r':
                         dx[2] += -5
+                    if c =='x':
+                        tempo += -0.5
+                    if c == 'c':
+                        tempo += 0.5
                     if c == 'q':
                         break
+                
+                if c == 'q':
+                    break
+                
+                if tempo < 1.:
+                    temo = 1.
+                if tempo > 5.:
+                    tempo = 5.
+                
                 print "dx = ",dx
                 
                 # calcul de la cinématique inverse
@@ -373,14 +389,10 @@ if __name__=='__main__':
                 
                 # On laisse le temps à poppy d'effectuer le déplacement 
                 # avant de relancer la boucle
-                print "Temporisation de 4s pour laisser poppy bouger"
-                time.sleep(4)
+                print "Temporisation de ",tempo,"s pour laisser poppy bouger"
+                time.sleep(tempo)
                 
-                if c == 'q':
-                    break
-        
-                else :
-                    print "L'entrée ne correspond à aucune action.\n"
+                
             
             # Arrêter complètement la simulation poppy
             poppy.stop_simulation()
