@@ -201,10 +201,10 @@ voir 'cinematique directe.nb' pour le calcul de la formule de x, y et z
 
 """
 def dk_l_hand(q=np.array([0,0,0,0])):
-    ab = 30
-    bc = 30
-    cd = 70
-    de = 90
+    ab = 30.
+    bc = 45.
+    cd = 105.
+    de = 120. + 90./2. # 120 mm pour l'avant bras et 45 pour la moitiée de la main
     
     x = -bc*np.cos(q[1])*np.sin(q[0]) - cd*np.cos(q[1])*np.sin(q[0]) - de*(np.cos(q[1])*np.cos(q[3])*np.sin(q[0]) + (np.cos(q[0])*np.cos(q[2]) + np.sin(q[0])*np.sin(q[1])*np.sin(q[2]))*np.sin(q[3]))
     y = ab + bc*np.sin(q[1]) + cd*np.sin(q[1]) - de*(-np.cos(q[3])*np.sin(q[1]) + np.cos(q[1])*np.sin(q[2])*np.sin(q[3]))
@@ -221,28 +221,128 @@ map(math.radians,[-80,70,-80,-60]),
 map(math.radians,[-120,45,-65,-30])
 ])
 
+
+def ik_num_l_hand(x,it=1,imax=10):
+    ab = 30.
+    bc = 45.
+    cd = 105.
+    de = 120. + 90./2. # 120 mm pour l'avant bras et 45 pour la moitiée de la main
+    
+    xf = x
+    # On vérifie que la consigne demandée est dans le domaine du possible du bras.
+    if np.linalg.norm(xf-np.array([0,ab,0])) > (bc+cd+de-5):
+        xf = (bc+cd+de-5)/np.linalg.norm(xf)*xf # si non, on la met au plus proche
+    
+    
+    return ik_num(dk_l_hand,4,mapping_dk_l_hand,xf,it,imax)
+
 if __name__=='__main__':
     
+    print "--- Module test de la cinématique inverse de Poppy --- \n\n"
     
-    qinit = np.array(map(math.radians,[1,45,1,-85]))
-    print "mapping = ", qinit
+    while True :
+        print "Pour lancer la simulation, ouvrir V-rep, \
+        \npuis appuyer sur o<enter> pour lancer la simulation \
+        \nAppuyer sur q<enter> à tout moment pour quitter.\n"
+        
+        s=raw_input("==>")
+        
+        if s == 'o':
+            #Simulation V-rep
+            print "\n--- Debut de la simulation --- \n"
+            
+            # Import des bibliothèques nécessaires
+            import pypot
+            from poppy.creatures import PoppyHumanoid
+            import time
+            
+            # démmarre la simulation poppy dans vrep. Il faut lancer V-rep avant d'executer le code.
+            poppy = PoppyHumanoid(simulator='vrep')
+            
+            # Mise en position initiale de Poppy
+            poppy.l_shoulder_y.goal_position = 20.
+            poppy.l_shoulder_x.goal_position = 30.
+            poppy.l_arm_z.goal_position = -20
+            poppy.l_elbow_y.goal_position = -50
+            
+            time.sleep(4)
+            
+            # Boucle de pilotage
+            while True:
+                
+                q = np.array([0.,0.,0.,0.])
+                
+                # On récupère la position actuelle de poppy dans V-rep
+                q[0] = math.radians(poppy.l_shoulder_y.present_position)
+                q[1] = math.radians(poppy.l_shoulder_x.present_position)
+                q[2] = math.radians(poppy.l_arm_z.present_position)
+                q[3] = math.radians(poppy.l_elbow_y.present_position)
+                
+                print "q initial = ",q
+                
+                x = dk_l_hand(q)
+                print "x initial = ",x,"\n"
+                                
+                dx = np.array([0.,0.,0.])
+                print "Entrer une chaine de caractère, chaque caractère aura l'effet suivant :\n\
+                e ---> Avance le bras de 5mm\n\
+                d ---> Recule le bras de 5mm\n\
+                s ---> Bouge le bras vers la gauche de 5mm\n\
+                f ---> Bouge le bras vers la droite de 5mm\n\
+                z ---> Monte la main de 5mm \n\
+                r ---> Descend le bras de 5mm \n\
+                q ---> Quitte le programme\n\n\
+                NB : Les caractères peuvent être entrés plusieurs fois pour additionner les effets."
+                
+                s=raw_input("==>")
+                
+                # Gestion des entrées clavier
+                for c in s :
+                    if c == 'e':
+                        dx[0] += 5 
+                    if c == 'd':
+                        dx[0] += -5
+                    if c == 's':
+                        dx[1] += 5
+                    if c == 'f':
+                        dx[1] += -5
+                    if c == 'z':
+                        dx[2] += 5
+                    if c == 'r':
+                        dx[2] += -5
+                    if c == 'q':
+                        break
+                print "dx = ",dx
+                
+                # calcul de la cinématique inverse
+                q = ik_num_l_hand(x+dx)
+                
+                
+                # Pilotage de poppy (simple)
+                poppy.l_shoulder_y.goal_position = math.degrees(q[0])
+                poppy.l_shoulder_x.goal_position = math.degrees(q[1])
+                poppy.l_arm_z.goal_position = math.degrees(q[2])
+                poppy.l_elbow_y.goal_position = math.degrees(q[3])
+                
+                time.sleep(4) # On laisse le temps à poppy d'effectuer le déplacement avant de relancer la boucle
+                
+                if c == 'q':
+                    break
+        
+                else :
+                    print "L'entrée ne correspond à aucune action.\n"
+            
+            # Arrêter complètement la simulation poppy
+            poppy.stop_simulation()
+            pypot.vrep.close_all_connections()
+            
+            break
+            
+        elif s == 'q':
+            break
+        
+        else :
+            print "L'entrée ne correspond à aucune action."
     
-    dx = np.array([10,20,10])
-    xi = dk_l_hand(qinit)
-    xfinal = xi + dx
-    
-    print "xinit th = ",xi
-    print "xfinal th = ",xfinal
-    
-    print "\n\n"
-    
-    qf = ik_num(dk_l_hand,4,mapping_dk_l_hand,xfinal)
-    
-    print "xfinal calc = ",dk_l_hand(qf)
-    print "\n\n"
-    
-    qf = map(math.degrees,qf)
-    
-    print "qf en degree = ",qf
-     
+    print "\n------ Fin du programme -------"
     

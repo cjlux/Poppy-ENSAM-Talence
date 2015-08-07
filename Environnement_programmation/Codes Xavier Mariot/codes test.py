@@ -44,3 +44,5 @@ for i in range(2):
     poppy.head_y.goal_position = +20
 poppy.head_y.goal_position = 0
 
+poppy.l_shoulder_y.goal_position = -45
+poppy.l_shoulder_x.goal_position = 45
