@@ -79,8 +79,7 @@ Il faut télécharger le pilote [USB2AX.inf] (http://www.xevelabs.com/doku.php?i
   - insérer la carte USB2AX dans un port USB du PC : la LED <span style="color: #fb4141">rouge</span> s'allume ! annuler la recherche automatique de driver éventuellement lancée par Windows.
   - ouvrir le _Gestionnaire de périphérique_ (_menu Démarrer_ > _Panneau de Configration_ > _Système et sécurité_ > _Gestionnaire de périphériques_)
   - dans la section des ports série (COM et LP), vous devriez voir un périphérique USB2X en erreur, signalé par un point d'excamation : avec un clic-droit sur USB2AX, lancez le menu _Mettre à jour le pilote_ en _recherchant le pilote sur mon ordinateur_
-  - naviguer jusqu'au fichier _ USB2AX.inf_ que vous avez téléchargé
-Une fois le pilote installé, la LED rouge de l'USB2AX doit s'éteindre, et sa LED verte doit s'allumer !
+  - naviguer jusqu'au fichier _USB2AX.inf_ que vous avez téléchargé : une fois le pilote installé, la LED rouge de l'USB2AX doit s'éteindre, et sa LED verte doit s'allumer !
 
 ##### Paramétrage avec le programme Python _herborist_
 Sous Windows, vous devez également taper la commande `pip install pypot` dans la fenêtre de commande,  ou mieux, dans la fenetre *Anaconda command prompt*, si vous avez intallé Python sur votre PC avec Anaconda. 
@@ -88,7 +87,7 @@ _pip_ télécharge et installe le paquet _pypot_ depuis le site https://pypi.pyt
 L'utilisation de _herborist_ est la même que pour GNU/Linux ou Mac OS X.
 
 ##### Paramètrage avec le logiciel **DynamixelWizard**, inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
-Vidéo du paramétrage :  
+Vidéo du paramétrage avec le logiciel _DynamixelWizard_ :  
 [<img src="http://147.210.74.152/Poppy/Videos/servomoteurs_parametrages_win.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/servomoteurs_parametrages_win.mp4)
 &nbsp;&nbsp;
