@@ -5,12 +5,15 @@
 # Montage et paramétrage des servomoteurs Dynamixel
 ---
 
+## Montage des servomoteurs
+
 Les servomoteurs Dynamixel MX-28T et MX-64 sont vendus partiellement montés :
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/boite_1_contenu_face_ld.jpg" align="bottom" width="595" height="355">]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/boite_1_contenu_face_ld.jpg)  
 
 Le montage consiste à fixer le palonnier à l'arbre moteur.
-## Matériel nécessaire :
+
+### Matériel nécessaire :
   - clef allen de 2 mm.
 
 **Attention** Il faut aligner l'encoche sur le palonnier avec le poinçonnage sur l'arbre du servomoteur :  
@@ -23,7 +26,7 @@ La rondelle doit être intercalée entre le palonnier et le servomoteur :
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg" name="Image5" align="bottom" width="245" height="141" border="0" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/rondelles_3.jpg)
 
-La Procédure de montage est ici : 
+La vidéo montrant le montage est ici : 
 [<img src="http://147.210.74.152/Poppy/Videos/assemblage_dynamixel_french_avec_music.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/assemblage_dynamixel_french_avec_music.mp4)
 &nbsp;&nbsp;
@@ -31,11 +34,11 @@ La Procédure de montage est ici :
 (http://147.210.74.152/Poppy/Videos/assemblage_dynamixel_french_avec_music.ogv)
 
 
-# Paramétrage
+## Paramétrage
 
 Le but du paramétrage est de fixer le numéro **id** de chacun des servomoteurs, ainsi qu'un certain nombre d'autres paramètres dont la valeur usine ne convient pas au focntionnement sur le robot Poppy.
 
-## Matériel nécessaire :
+### Matériel nécessaire :
   - électronique
     - une alimentation 12 V : par exemple l'alimentation SMPS 12V 5A PS-10  
     - une carte SMPS2Dynamixel comportant une entrée pour alimentation 12 V et 2 connecteurs 3 points pour le branchement d'un sermoteur Dynamixel
@@ -49,9 +52,9 @@ Le but du paramétrage est de fixer le numéro **id** de chacun des servomoteurs
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg" align="bottom" width="643" height="243" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg)
 
-## Logiciel nécessaire :
-### _Linux/Mac_
-#### **PyPot**  
+### Logiciel nécessaire :
+#### _Linux/Mac_
+##### **PyPot**  
 La paquet Python *Pypot* fournit entre autre le programme *herborist* qui permet de configurer les servomoteurs via un port USB. La commande  d'installation de *pypot* est : `sudo pip install pypot`.  
 *pip* télécharge et installe le paquet *pypot* depuis le site https://pypi.python.org/pypi.   
 
@@ -64,11 +67,18 @@ Pour vérifier si vous faites partie du groupe *dialout*, tapez la commande `id`
   - Sinon, il faut ajouter votre login au groupe *dialout* en tapant la commande `sudo adduser yourlogin dialout`. Sur la plupart des systèmes GNU/Linux, les attributs de session (liste des groupes par exemple...) sont fixés à l'ouverture de la session : pour activer le changement de groupe, fermez puis ouvrez à nouveau votre session utilisateur. Tapez à nouveau`id` : cette fois le groupe *dialout* doit apparaître.
 
 
-### _Windows_  
-  - FTDI (VCP) Driver: [USB2AX.inf] (http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart) pour communiquer avec USB2Dynamixel
-  - **DynamixelWizard** inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
+#### _Windows_  
+  - Il faut télécharger le driver [USB2AX.inf] (http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart) et l'installer sur votre PC pour pouvoir utiliser la carte USB2AX.
+    - insérer la carte USB2AX dans un port USB du PC : la LED rouge s'allume ! annuler la recherche automatique de driver éventuellement lancée par Windows.
+    - Ouvrir le _Gestionnaire de périphérique_ (_menu Démarrer_>_Panneau de Configration_>_Système et sécurité_>_Gestionnaire de périphériques_)
+    - Dans la section des ports série, vous devriez voir un périphérique USB2X en erreur, signalé par un point d'excamation : avec un clic-droit sur USB2AX, lancer le menu _Mettre à jour le pilote_ en _recherchant le pilote sur mon ordinateur_
+    - naviguer jusqu'au fichier _ USB2AX.inf_ que vous avez téléchargé
 
-Procédure :  
+Une fois le pilote installé, la LED rouge de l'USB2AX doit s'éteindre, et sa LED verte doit s'allumer !
+
+  - Paramètrage avec le logiciel **DynamixelWizard**, inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
+
+Vidéo du paramétrage :  
 [<img src="http://147.210.74.152/Poppy/Videos/servomoteurs_parametrages_win.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/servomoteurs_parametrages_win.mp4)
 &nbsp;&nbsp;
