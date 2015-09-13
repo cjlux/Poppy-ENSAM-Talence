@@ -53,31 +53,41 @@ Le but du paramétrage est de fixer le numéro **id** de chacun des servomoteurs
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg)
 
 ### Logiciel nécessaire :
-#### _Linux/Mac_
-##### **PyPot**  
-La paquet Python *Pypot* fournit entre autre le programme *herborist* qui permet de configurer les servomoteurs via un port USB. La commande  d'installation de *pypot* est : `sudo pip install pypot`.  
-*pip* télécharge et installe le paquet *pypot* depuis le site https://pypi.python.org/pypi.   
+On peut utiliser au choix :
+- le logiciel _herborist_ : programme Python fourni par le module _Pypot_, utilisable sous GNU/Linux, Mac OS X et Windows
+- le logiciel **DynamixelWizard**, propriétaire Robotis, disponible pour Windows.
 
-Pour tester l'installation vous pouvez taper : `python -c "import pypot"` qui ne devrait pas retourner d'erreur !  
-L'utilisation d'*Herborist* nécessite des *accès en écriture* sur les ports USB (on parle aussi de *port série*) : pour avoir ces accès, l'utilisateur doit faire partie du groupe *dialout*.  
-Pour vérifier si vous faites partie du groupe *dialout*, tapez la commande `id` : 
+#### GNU/Linux et Mac OS X
+##### Programme Python _herborist_ 
+Le module Python *Pypot* fournit (entre autre) le programme *herborist* qui permet de configurer les servomoteurs via une carte USB2AX connectée à un port USB. L'installation de _pypot_ se fait en tapant tant un terminal la commande :
+`sudo pip install pypot`.  
+_pip_ télécharge et installe le paquet _pypot_ depuis le site https://pypi.python.org/pypi. Pour tester l'installation vous pouvez taper dans un terminal : `python -c "import pypot"` qui ne devrait pas retourner d'erreur !  
+
+L'utilisation d'_herborist_ nécessite des _accès en écriture_ sur les ports USB (on parle aussi de _port série_) : pour avoir ces accès, l'utilisateur doit faire partie du groupe `dialout`.  
+Pour vérifier si vous faites partie du groupe `dialout`, tapez la commande `id` dans un terminal : 
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/id_dialout.png" align="bottom" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/id_dialout.png)
-  - si *dialout* est dans la liste, vous faites partie de ce groupe et vous bénéficiez automatiquement des accès en lecture/écriture au port série.
-  - Sinon, il faut ajouter votre login au groupe *dialout* en tapant la commande `sudo adduser yourlogin dialout`. Sur la plupart des systèmes GNU/Linux, les attributs de session (liste des groupes par exemple...) sont fixés à l'ouverture de la session : pour activer le changement de groupe, fermez puis ouvrez à nouveau votre session utilisateur. Tapez à nouveau`id` : cette fois le groupe *dialout* doit apparaître.
+  - si `dialout` est dans la liste, vous faites partie de ce groupe et vous bénéficiez des accès en lecture/écriture au port série.
+  - Sinon, il faut ajouter votre login au groupe `dialout` en tapant dans un terminal la commande `sudo adduser yourlogin dialout`. 
+  ATTENTION : sur la plupart des systèmes GNU/Linux, les attributs de session (liste des groupes...) sont fixés à l'ouverture de la session => pour activer le changement de groupe, fermez puis ouvrez de nouveau votre session utilisateur. Tapez maintenant `id` : cette fois le groupe `dialout` doit apparaître.
 
+Une fois l'installation faite, vous pouvez lancer *herborist* en tapant dans un terminal la commande `herborist` : l'interface graphique se lance, avec laquelle vous pouvez configurer un à un les servomoteurs nécessaires à Poppy.
 
-#### _Windows_  
-  - Il faut télécharger le driver [USB2AX.inf] (http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart) et l'installer sur votre PC pour pouvoir utiliser la carte USB2AX.
-    - insérer la carte USB2AX dans un port USB du PC : la LED rouge s'allume ! annuler la recherche automatique de driver éventuellement lancée par Windows.
-    - Ouvrir le _Gestionnaire de périphérique_ (_menu Démarrer_>_Panneau de Configration_>_Système et sécurité_>_Gestionnaire de périphériques_)
-    - Dans la section des ports série, vous devriez voir un périphérique USB2X en erreur, signalé par un point d'excamation : avec un clic-droit sur USB2AX, lancer le menu _Mettre à jour le pilote_ en _recherchant le pilote sur mon ordinateur_
-    - naviguer jusqu'au fichier _ USB2AX.inf_ que vous avez téléchargé
-
+#### Windows
+##### Pilote de la caret USB2AX
+Il faut télécharger le pilote [USB2AX.inf] (http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart) et l'installer sur votre PC pour pouvoir utiliser la carte USB2AX :
+  - insérer la carte USB2AX dans un port USB du PC : la LED rouge s'allume ! annuler la recherche automatique de driver éventuellement lancée par Windows.
+  - ouvrir le _Gestionnaire de périphérique_ (_menu Démarrer_ > _Panneau de Configration_ > _Système et sécurité_ > _Gestionnaire de périphériques_)
+  - dans la section des ports série (COM et LP), vous devriez voir un périphérique USB2X en erreur, signalé par un point d'excamation : avec un clic-droit sur USB2AX, lancez le menu _Mettre à jour le pilote_ en _recherchant le pilote sur mon ordinateur_
+  - naviguer jusqu'au fichier _ USB2AX.inf_ que vous avez téléchargé
 Une fois le pilote installé, la LED rouge de l'USB2AX doit s'éteindre, et sa LED verte doit s'allumer !
 
-  - Paramètrage avec le logiciel **DynamixelWizard**, inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
+##### Paramétrage avec le programme Python _herborist_
+Sous Windows, vous devez également taper la commande `pip install pypot` dans la fenêtre de commande,  ou mieux, dans la fenetre *Anaconda command prompt*, si vous avez intallé Python sur votre PC avec Anaconda. 
+_pip_ télécharge et installe le paquet _pypot_ depuis le site https://pypi.python.org/pypi. Pour tester l'installation vous pouvez taper la commande : `python -c "import pypot"` qui ne devrait pas retourner d'erreur !   
+L'utilisation de _herborist_ est la même que pour GNU/Linux ou Mac OS X.
 
+##### Paramètrage avec le logiciel **DynamixelWizard**, inclus dans la suite logicielle [RobotPlus] (http://support.robotis.com/en/software/roboplus_main.htm).
 Vidéo du paramétrage :  
 [<img src="http://147.210.74.152/Poppy/Videos/servomoteurs_parametrages_win.png" align="center" width="180">.mp4]
 (http://147.210.74.152/Poppy/Videos/servomoteurs_parametrages_win.mp4)
@@ -89,4 +99,3 @@ Vidéo du paramétrage :
 [ :arrow_left: Vérification du kit] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/V%C3%A9rification%20du%20kit.md)
 [ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
 [ :arrow_right: Montage, assemblage global ] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%20et%20assemblage%20global.md)
-
