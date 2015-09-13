@@ -2,7 +2,7 @@
 [ :house: Sommaire] (https://github.com/cjlux/Poppy-ENSAM-Talence/wiki/Version-Fran%C3%A7aise)
 [ :arrow_right: Montage, assemblage global ] (https://github.com/cjlux/Poppy-ENSAM-Talence/blob/French/Montage%20et%20assemblage%20global.md)
 
-# Montage des servomoteurs
+# Montage et paramétrage des servomoteurs Dynamixel
 ---
 
 Les servomoteurs Dynamixel MX-28T et MX-64 sont vendus partiellement montés :
@@ -33,16 +33,18 @@ La Procédure de montage est ici :
 
 # Paramétrage
 
+Le but du paramétrage est de fixer le numéro **id** de chacun des servomoteurs, ainsi qu'un certain nombre d'autres paramètres dont la valeur usine ne convient pas au focntionnement sur le robot Poppy.
+
 ## Matériel nécessaire :
   - électronique
-    - alimentation 12 V : SMPS 12V 5A PS-10 x1
-    - carte pour alimenter en 12 V les servos : SMPS2Dynamixel x1
-    - convertisseur USB <-> 3 points : USB2AX x1
+    - une alimentation 12 V : par exemple l'alimentation SMPS 12V 5A PS-10  
+    - une carte SMPS2Dynamixel comportant une entrée pour alimentation 12 V et 2 connecteurs 3 points pour le branchement d'un sermoteur Dynamixel
+    - une carte USB2AX convertisseur USB <-> 3 points pour le pilotage d'un servomoteur Dynamixel
   - câblage
-    - câble USB 30 cm  mâle–femalle x1
-    - deux câbles avec connecteurs 3 points : Cable-3P x2 (longueur indifférente)
+    - un câble USB mâle–femelle 
+    - deux câbles avec connecteurs 3 points (Câble-3P, longueur indifférente)
   - servomoteur
-    - MX-28T ou MX-64 ou AX-12A x1
+    - un servomoteur MX-28T, MX-64 ou AX-12A.
 
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg" align="bottom" width="643" height="243" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/_1020822_ld.jpg)
