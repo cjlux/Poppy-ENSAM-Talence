@@ -54,22 +54,33 @@ Le but du paramétrage est de fixer le numéro **id** de chacun des servomoteurs
 
 ### Logiciel nécessaire :
 On peut utiliser au choix :
-- le logiciel _herborist_ : programme Python fourni par le module _Pypot_, utilisable sous GNU/Linux, Mac OS X et Windows,
+- le logiciel _herborist_ : programme Python utilisable sous GNU/Linux, Mac OS X et Windows, permettant de configurer les servomoteurs via une carte USB2AX. Il est fourni par le module _Pypot_.
 - le logiciel _DynamixelWizard_, propriétaire Robotis, disponible pour Windows.
 
-#### GNU/Linux et Mac OS X
+#### GNU/Linux
 ##### Programme Python _herborist_ 
-Le module Python _Pypot_ fournit le programme *herborist* permettant de configurer les servomoteurs via une carte USB2AX. L'installation du module _pypot_ se fait en tapant tant un terminal :
-`sudo pip install pypot`.  
-_pip_ télécharge et installe le paquet _pypot_ depuis le site https://pypi.python.org/pypi. Pour tester l'installation vous pouvez taper dans un terminal : `python -c "import pypot"` qui ne devrait pas retourner d'erreur !  
+L'installation du module _pypot_ se fait en tapant tant un terminal :
+`sudo pip install pypot` (si vous utilisez Python3, la commande `pip` peut s'appeler `pip3`). _pip_ télécharge et installe le paquet _pypot_ depuis le site https://pypi.python.org/pypi. 
 
-L'utilisation d'_herborist_ nécessite des _accès en écriture_ sur les ports USB (on parle aussi de _port série_) : pour avoir ces accès, votre login doit faire partie du groupe `dialout`.  
+Pour tester l'installation vous pouvez taper dans un terminal `python -c "import pypot"` (si vous utilisez Python3, il faudra peut-être remplacer `python` par `python3`) : aucun message d'erreur ne doit apparaître à l'écran.
+
+L'utilisation d'_herborist_ sous GNU/Linux nécessite que vous ayez des _accès en écriture_ sur les ports USB 
+(on parle aussi de _port série_) : pour avoir ces accès, votre login doit faire partie du groupe `dialout`.  
 Pour vérifier si vous faites partie du groupe `dialout`, tapez la commande `id` dans un terminal : 
 [<img src="http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/id_dialout.png" align="bottom" >]
 (http://147.210.74.152/Poppy/2_Montage_Parametrage_des_servomoteurs/id_dialout.png)
   - si `dialout` est dans la liste, vous bénéficiez des accès en lecture/écriture au port série.
-  - Sinon, il faut ajouter votre login au groupe `dialout` en tapant dans un terminal `sudo adduser yourlogin dialout` (remplacer `yourlogin` par votre nom d'utilisateur). 
-  **ATTENTION** : sur la plupart des systèmes GNU/Linux, les attributs de session (liste des groupes...) sont fixés à l'**ouverture de la session** => pour activer le changement de groupe, fermez puis ouvrez de nouveau votre session utilisateur. Tapez maintenant `id` dans un terminal : cette fois le groupe `dialout` doit apparaître.
+  - sinon, il faut ajouter votre login au groupe `dialout` en tapant dans un terminal `sudo adduser yourlogin dialout` (remplacer `yourlogin` par votre nom d'utilisateur). 
+
+**ATTENTION** : sur la plupart des systèmes GNU/Linux, les attributs de session (liste des groupes...) sont fixés à l'**ouverture de la session** => pour activer le changement de groupe, fermez puis ouvrez de nouveau votre session utilisateur. Tapez maintenant `id` dans un terminal : cette fois le groupe `dialout` doit apparaître.
+
+Une fois l'installation faite, vous pouvez lancer *herborist* en tapant dans un terminal la commande `herborist` : l'interface graphique se lance, avec laquelle vous pouvez scanner et configurer un à un les servomoteurs nécessaires à Poppy.
+
+#### Mac OS X
+##### Programme Python _herborist_ 
+L'installation du module _pypot_ se fait comme pour GNU/Linux, en tapant tant un terminal :
+`sudo pip install pypot`. _pip_ télécharge et installe le paquet _pypot_ depuis le site https://pypi.python.org/pypi. 
+Pour tester l'installation vous pouvez taper dans un terminal `python -c "import pypot"` : aucun message d'erreur ne doit apparaître à l'écran.
 
 Une fois l'installation faite, vous pouvez lancer *herborist* en tapant dans un terminal la commande `herborist` : l'interface graphique se lance, avec laquelle vous pouvez configurer un à un les servomoteurs nécessaires à Poppy.
 
